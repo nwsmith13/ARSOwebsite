@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory &amp; Operational Visibility | ARSO Solutions Lab</title>
+    <meta
+      name="description"
+      content="A practical inventory and operational visibility system built around stock levels, locations, reorders, vendor movement, and day-to-day inventory tracking."
+    />
+    <meta property="og:site_name" content="ARSO Solutions Lab" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Inventory &amp; Operational Visibility | ARSO Solutions Lab" />
+    <meta property="og:description" content="A practical inventory and operational visibility system built around stock levels, locations, reorders, vendor movement, and day-to-day inventory tracking." />
+    <meta property="og:image" content="/Assets/apple-touch-icon.svg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Inventory &amp; Operational Visibility | ARSO Solutions Lab" />
+    <meta name="twitter:description" content="A practical inventory and operational visibility system built around stock levels, locations, reorders, vendor movement, and day-to-day inventory tracking." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/Assets/favicon.svg" />
+    <link rel="apple-touch-icon" href="/Assets/apple-touch-icon.svg" />
+  </head>
+  <body class="inventory-detail-page">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <img src="/Assets/logo-full-light.svg" alt="ARSO Solutions Lab" class="logo logo-full" />
+          <img src="/Assets/logo-compact1.svg" alt="AR" class="logo logo-compact" />
+        </a>
+
+        <nav class="nav-links">
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+          <a href="index.html#contact" class="btn btn-sm">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="crm-detail-main inventory-detail-main">
+      <section class="section crm-detail-hero inventory-detail-hero">
+        <div class="container crm-detail-hero-grid">
+          <div class="crm-detail-copy">
+            <span class="eyebrow">Inventory &amp; Operational Visibility</span>
+            <h1>Know what&rsquo;s on hand before it becomes a problem.</h1>
+            <p>
+              When inventory counts, reorder needs, vendors, and locations are tracked by hand or
+              buried in spreadsheets, teams usually find problems too late. ARSO builds practical
+              inventory views that make stock levels, movement, and follow-up easier to see.
+            </p>
+            <div class="crm-detail-actions">
+              <a href="index.html#contact" class="btn">Map My Process</a>
+              <a href="index.html#contact" class="btn btn-secondary">Talk Through a Workflow</a>
+            </div>
+          </div>
+
+          <div class="crm-product-shell inventory-product-shell inventory-hero-system" aria-label="Inventory visibility dashboard preview">
+            <div class="crm-product-topbar">
+              <span><img src="/Assets/icon-light.svg" alt="" aria-hidden="true" />ARSO Inventory</span>
+              <em>Updated 8m ago</em>
+            </div>
+            <div class="crm-product-title">
+              <div>
+                <strong>Inventory Control</strong>
+                <p>Stock, reorders, vendors, and movement in one operating view.</p>
+              </div>
+              <span class="crm-live-pill inventory-alert-pill">Auto reorder triggered</span>
+            </div>
+
+            <div class="inventory-detail-kpis">
+              <div><span>In Stock</span><strong>1,284</strong><em>92% healthy</em></div>
+              <div><span>Low Stock</span><strong>18</strong><em>Needs review</em></div>
+              <div><span>Reorders</span><strong>7</strong><em>4 vendor drafts</em></div>
+              <div><span>Locations</span><strong>4</strong><em>2 synced</em></div>
+            </div>
+
+            <div class="inventory-detail-hero-grid">
+              <div class="inventory-detail-table">
+                <div class="inventory-detail-row head"><span>Item</span><span>SKU</span><span>Qty</span><span>Status</span><span>Location</span></div>
+                <div class="inventory-detail-row"><strong>Air Filters</strong><span>AF-220</span><span>142</span><em>Healthy</em><span>Main WH</span></div>
+                <div class="inventory-detail-row"><strong>Receipt Paper</strong><span>RP-508</span><span>12</span><em class="watch">Low</em><span>Front Desk</span></div>
+                <div class="inventory-detail-row"><strong>Pump Seals</strong><span>PS-441</span><span>3</span><em class="risk">Critical</em><span>North Hub</span></div>
+                <div class="inventory-detail-row"><strong>Tablet Chargers</strong><span>TC-212</span><span>18</span><em class="info">Ordered</em><span>Field Ops</span></div>
+              </div>
+              <aside class="inventory-detail-side">
+                <div>
+                  <span>Recent Movement</span>
+                  <p><strong>Vendor shipment received</strong><em>AF-220 &bull; 10:42 AM</em></p>
+                  <p><strong>Auto reorder triggered</strong><em>PS-441 &bull; 9:18 AM</em></p>
+                  <p><strong>2 locations synced</strong><em>Main WH + Field Ops</em></p>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section crm-before-after" aria-label="Before and after inventory visibility">
+        <div class="container">
+          <div class="section-heading left">
+            <span class="eyebrow">Before / After</span>
+            <h2>Replace manual counts with clearer inventory visibility.</h2>
+          </div>
+          <div class="crm-before-after-grid">
+            <article class="crm-friction-card before">
+              <span>Before</span>
+              <ul>
+                <li>Counts are updated by hand</li>
+                <li>Low stock is discovered too late</li>
+                <li>Reorders depend on memory</li>
+                <li>Vendor updates live in scattered messages</li>
+                <li>Locations are hard to compare</li>
+              </ul>
+            </article>
+            <div class="crm-flow-arrow" aria-hidden="true"></div>
+            <article class="crm-friction-card after">
+              <span>After</span>
+              <ul>
+                <li>Live stock visibility</li>
+                <li>Low-stock alerts</li>
+                <li>Reorder status tracking</li>
+                <li>Vendor and location movement in one view</li>
+                <li>Fewer after-hours inventory surprises</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section crm-system-view inventory-system-view" aria-label="Inventory system view">
+        <div class="container">
+          <div class="section-heading left">
+            <span class="eyebrow">System View</span>
+            <h2>A live inventory view for stock, reorders, vendors, and locations.</h2>
+          </div>
+
+          <div class="crm-product-shell inventory-product-shell inventory-large-system">
+            <div class="crm-product-topbar">
+              <span><img src="/Assets/icon-light.svg" alt="" aria-hidden="true" />Inventory Operations</span>
+              <em>Stock transfer completed</em>
+            </div>
+            <div class="inventory-detail-kpis">
+              <div><span>In Stock</span><strong>1,284</strong><em>Live count</em></div>
+              <div><span>Low Stock</span><strong>18</strong><em>Needs review</em></div>
+              <div><span>Reorders</span><strong>7</strong><em>Auto drafts</em></div>
+              <div><span>Locations</span><strong>4</strong><em>2 synced</em></div>
+            </div>
+            <div class="inventory-system-grid">
+              <div class="inventory-detail-table expanded">
+                <div class="inventory-detail-row head"><span>Item</span><span>SKU</span><span>Qty</span><span>Status</span><span>Location</span></div>
+                <div class="inventory-detail-row"><strong>Cleaning Solution</strong><span>CS-110</span><span>36</span><em>Healthy</em><span>Supply</span></div>
+                <div class="inventory-detail-row"><strong>Receipt Paper</strong><span>RP-508</span><span>12</span><em class="watch">Low</em><span>Front Desk</span></div>
+                <div class="inventory-detail-row"><strong>Lane Oil</strong><span>LO-320</span><span>4</span><em class="risk">Critical</em><span>Storage B</span></div>
+                <div class="inventory-detail-row"><strong>Tablet Chargers</strong><span>TC-212</span><span>18</span><em class="info">Ordered</em><span>Field Ops</span></div>
+                <div class="inventory-detail-row"><strong>Printer Labels</strong><span>PL-612</span><span>64</span><em>Healthy</em><span>Back Office</span></div>
+              </div>
+              <aside class="inventory-detail-side">
+                <div class="inventory-chart-card">
+                  <span>Stock Capacity</span>
+                  <strong>86%</strong>
+                  <div class="inventory-detail-bars"><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <div>
+                  <span>Recent Movement</span>
+                  <p><strong>Vendor shipment received</strong><em>AF-220 &bull; 10:42 AM</em></p>
+                  <p><strong>Auto reorder triggered</strong><em>LO-320 &bull; 9:18 AM</em></p>
+                  <p><strong>Stock transfer completed</strong><em>RP-508 &bull; Yesterday</em></p>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section crm-capabilities inventory-capabilities" aria-label="Inventory operational capabilities">
+        <div class="container">
+          <div class="section-heading left">
+            <span class="eyebrow">What It Helps With</span>
+            <h2>Built to reduce stock surprises, manual checking, and cleanup work.</h2>
+          </div>
+          <div class="crm-capability-grid">
+            <article><i></i><h3>Stock visibility</h3><p>See quantities, status, and location without digging through spreadsheets.</p><em>Live count</em></article>
+            <article><i></i><h3>Reorder tracking</h3><p>Track what needs ordering, what has been ordered, and what is still waiting.</p><em>Reorder sent</em></article>
+            <article><i></i><h3>Location awareness</h3><p>Compare stock across rooms, vehicles, buildings, or sites.</p><em>2 synced</em></article>
+            <article><i></i><h3>Vendor movement</h3><p>Keep vendor updates, shipments, and reorder notes connected.</p><em>Shipment received</em></article>
+            <article><i></i><h3>Operational alerts</h3><p>Surface low stock, critical items, and overdue follow-up.</p><em>Critical item</em></article>
+            <article><i></i><h3>Team adoption</h3><p>Simple views built for daily use, not complicated warehouse software.</p><em>Team ready</em></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section crm-variants inventory-variants" aria-label="Customized inventory variants">
+        <div class="container">
+          <div class="section-heading left">
+            <span class="eyebrow">Customized Around Your Operation</span>
+            <h2>Same visibility foundation. Different inventory types, locations, and workflows.</h2>
+            <p>
+              ARSO systems can be shaped around the way your team tracks items, locations,
+              vendors, reorder timing, and daily operational movement.
+            </p>
+          </div>
+          <div class="crm-variant-grid">
+            <article class="crm-variant blue">
+              <strong>Service Truck Inventory</strong>
+              <div><span>Stocked</span><span>Low</span><span>Restock</span><span>Assigned</span></div>
+              <p><b></b>Truck 04 restock assigned</p>
+            </article>
+            <article class="crm-variant teal">
+              <strong>Bowling Center Supplies</strong>
+              <div><span>Snackbar</span><span>Pro Shop</span><span>Maintenance</span><span>Office</span></div>
+              <p><b></b>Lane oil marked critical</p>
+            </article>
+            <article class="crm-variant purple">
+              <strong>Multi-location Stockroom</strong>
+              <div><span>Main</span><span>Backroom</span><span>Vehicle</span><span>Remote</span></div>
+              <p><b></b>Remote location synced</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section crm-fit-process" aria-label="Inventory fit and process">
+        <div class="container crm-fit-process-grid">
+          <div class="crm-fit-card">
+            <h2>A good fit for teams that need clearer inventory visibility.</h2>
+            <div class="crm-fit-columns">
+              <div>
+                <span>Good fit</span>
+                <ul>
+                  <li>Inventory is tracked manually</li>
+                  <li>Stock questions take too long</li>
+                  <li>Reorders get missed or delayed</li>
+                  <li>Items move between locations</li>
+                  <li>Managers need shared visibility</li>
+                </ul>
+              </div>
+              <div>
+                <span>Not ideal</span>
+                <ul>
+                  <li>You need a full enterprise warehouse management system</li>
+                  <li>You require complex barcode hardware on day one</li>
+                  <li>You want a massive ERP rollout</li>
+                  <li>Your team needs hundreds of unused inventory features</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="crm-process-card">
+            <span class="eyebrow">How It Starts</span>
+            <h2>We map how inventory actually moves first.</h2>
+            <div class="crm-process-steps">
+              <article><span>01</span><p>Identify what gets tracked manually</p></article>
+              <article><span>02</span><p>Map items, locations, and reorder points</p></article>
+              <article><span>03</span><p>Build the shared inventory view</p></article>
+              <article><span>04</span><p>Refine around real usage</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section crm-final-cta">
+        <div class="container crm-final-card">
+          <div>
+            <span class="eyebrow">Process First</span>
+            <h2>Show us where inventory gets messy.</h2>
+            <p>
+              We&rsquo;ll help map what is being tracked, where visibility breaks, and what kind of
+              practical inventory system would make daily operations easier.
+            </p>
+          </div>
+          <div class="crm-detail-actions">
+            <a href="index.html#contact" class="btn">Map My Process</a>
+            <a href="index.html#contact" class="crm-text-link">Talk Through a Workflow</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" aria-label="ARSO Solutions Lab home">
+            <img src="/Assets/logo-full.svg" alt="ARSO Solutions Lab" class="footer-logo" />
+          </a>
+          <p>Practical operational systems built for real day-to-day work.</p>
+          <span>Built around how teams actually operate.</span>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer services navigation">
+          <h3>Services</h3>
+          <a href="crm-operations.html">CRM Systems</a>
+          <a href="services.html#service-dashboards">Operations Dashboards</a>
+          <a href="inventory-visibility.html" aria-current="page">Inventory Systems</a>
+          <a href="services.html#service-ai">Process Automation</a>
+          <a href="ai-workflow-assistant.html">AI Tools</a>
+          <a href="services.html#service-training">Team Enablement</a>
+          <a href="services.html#service-web-presence">Web Presence &amp; Intake</a>
+        </nav>
+
+        <nav class="footer-nav" aria-label="Footer company navigation">
+          <h3>Company</h3>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="index.html#how-we-work">How We Work</a>
+          <a href="careers.html">Careers</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="footer-cta">
+          <p>Most operational problems don&rsquo;t need more software. They need clearer systems.</p>
+          <a href="index.html#contact" class="footer-cta-link">Map My Process</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 ARSO Solutions Lab</p>
+        <nav aria-label="Footer legal navigation">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="careers.html">Careers</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      const header = document.querySelector("header");
+      let headerIsCompact = false;
+
+      function updateHeaderLogo() {
+        const shouldCompact = !headerIsCompact && window.scrollY > 120;
+        const shouldExpand = headerIsCompact && window.scrollY < 40;
+
+        if (shouldCompact) {
+          header.classList.add("scrolled");
+          headerIsCompact = true;
+        } else if (shouldExpand) {
+          header.classList.remove("scrolled");
+          headerIsCompact = false;
+        }
+      }
+
+      window.addEventListener("scroll", updateHeaderLogo, { passive: true });
+      updateHeaderLogo();
+    </script>
+    <script src="arso-polish.js"></script>
+  </body>
+</html>
+
