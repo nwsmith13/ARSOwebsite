@@ -1,2 +1,2 @@
-# ARSystemsLab
-AR Systems Lab Website
+# ARSO
+ARSO Solutions Lab Website
