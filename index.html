@@ -1,2285 +1,1279 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&display=swap" rel="stylesheet">
-    <title>ARSO Solutions Lab</title>
-    <meta
-      name="description"
-      content="ARSO Solutions Lab designs practical systems, automations, AI assistants, and custom tools that help small businesses run more efficiently."
-    />
-    <meta property="og:site_name" content="ARSO Solutions Lab" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="ARSO Solutions Lab" />
-    <meta property="og:description" content="ARSO Solutions Lab designs practical systems, automations, AI assistants, and custom tools that help small businesses run more efficiently." />
-    <meta property="og:image" content="Assets/apple-touch-icon.svg" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="ARSO Solutions Lab" />
-    <meta name="twitter:description" content="ARSO Solutions Lab designs practical systems, automations, AI assistants, and custom tools that help small businesses run more efficiently." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-	<link rel="icon" type="image/png" href="Assets/favicon.svg" />
-	<link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon-32.svg">
-<link rel="icon" type="image/png" sizes="16x16" href="Assets/favicon-16.svg">
-<link rel="apple-touch-icon" href="Assets/apple-touch-icon.svg">
-  </head>
-  <body class="home-page">
-    <header class="site-header">
-      <div class="container nav">
-<a class="brand" href="#top">
-  <img src="/Assets/logo-full-light.svg" alt="ARSO Solutions Lab" class="logo logo-full" />
-  <img src="/Assets/logo-compact1.svg" alt="AR" class="logo logo-compact" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM Demo | ARSO Solutions Lab</title>
+  <meta name="description" content="ARSO Solutions Lab CRM demo for practical business workflow, pipeline tracking, activity management, and operations visibility." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="crm-demo.css" />
+  <link rel="icon" type="image/png" href="Assets/favicon.svg" />
+</head>
+<body class="auth-loading">
+  <section class="auth-screen" id="authScreen" aria-labelledby="authTitle">
+    <div class="auth-card">
+      <img src="Assets/logo-full.svg" alt="ARSO Solutions Lab" class="auth-logo" />
+      <span class="panel-kicker">CRM Access</span>
+      <h1 id="authTitle">Sign in to continue</h1>
+      <p>Use your Supabase account credentials to open the CRM workspace.</p>
+
+      <form id="loginForm" class="auth-form">
+        <label>
+          Email
+          <input id="loginEmail" type="email" autocomplete="email" required />
+        </label>
+
+        <label>
+          Password
+          <input id="loginPassword" type="password" autocomplete="current-password" required />
+        </label>
+
+        <button type="submit" class="primary-btn" id="loginSubmitBtn">
+          <i data-lucide="log-in"></i> Sign In
+        </button>
+      </form>
+
+      <p class="auth-error" id="authError" role="alert"></p>
+      <button type="button" class="ghost-btn auth-preview-btn" id="localPreviewBtn" hidden>
+        Open Local Preview
+      </button>
+    </div>
+  </section>
+
+  <div class="demo-shell">
+    <aside class="demo-sidebar">
+<a href="#dashboard" class="demo-brand" aria-label="ARSO Solutions Lab home">
+  <img src="Assets/logo-full-light.svg" alt="ARSO Solutions Lab" class="demo-logo" />
+  <span class="demo-product">CRM</span>
 </a>
 
-        <nav class="nav-links">
-          <a href="services.html">Services</a>
-          <a href="projects.html">Projects</a>
-          <a href="about.html">About</a>
-          <a href="#contact" class="btn btn-sm">Contact</a>
-        </nav>
-      </div>
-    </header>
 
-    <main id="top">
-<section class="hero hero-showcase">
-  <div class="container">
-    <div class="hero-showcase-grid">
-      <div class="hero-left">
-        <p class="eyebrow">Systems &bull; Automation &bull; AI Solutions</p>
-        <h1>
-          Fix messy processes.<br>
-          Build <span>smarter solutions.</span>
-        </h1>
+<aside class="sidebar">
 
-        <p class="hero-copy">
-          ARSO Solutions Lab builds practical tools, dashboards, automations, and AI-assisted
-          systems that help businesses reduce manual work and run cleaner day-to-day operations.
-        </p>
+  <!-- MAIN -->
+  <div id="dashboard" class="sidebar-group">
+    	
+<div class="sidebar-label-row">
+  <span class="sidebar-label">Main</span>
 
-        <p class="hero-pricing hero-pricing-card">
-          Smaller tools and automations often start around <strong>$500</strong>,
-          with more complex systems typically ranging from <strong>$1,000&ndash;$5,000+</strong>.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#contact" class="btn">Request a Free Demo</a>
-          <a href="#projects" class="btn btn-secondary">View Examples</a>
-        </div>
-
-        <div class="hero-service-strip" aria-label="Core services">
-          <div>
-            <i data-lucide="users-round"></i>
-            <span>CRM<br>Systems</span>
-          </div>
-          <div>
-            <i data-lucide="bar-chart-3"></i>
-            <span>Dashboards<br>&amp; Reporting</span>
-          </div>
-          <div>
-            <i data-lucide="settings-2"></i>
-            <span>Automation<br>&amp; Workflows</span>
-          </div>
-          <div>
-            <i data-lucide="code-2"></i>
-            <span>Internal<br>Tools</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual-wrap" aria-hidden="true">
-        <div class="hero-product-board arso-app-shell">
-          <aside class="hero-product-sidebar arso-app-sidebar">
-           <div class="hero-logo-wrap">
-  <img src="/Assets/icon-light.svg" alt="" aria-hidden="true" class="hero-dashboard-logo" />
+  <button class="sidebar-collapse-btn" id="sidebarCollapseBtn" aria-label="Collapse sidebar">
+    <i data-lucide="chevron-left"></i>
+  </button>
 </div>
-            <span class="hero-nav-pill active"><i data-lucide="home"></i> Dashboard</span>
-            <span><i data-lucide="bar-chart-3"></i> Leaderboard</span>
-            <span><i data-lucide="trophy"></i> Competitions</span>
-            <span><i data-lucide="handshake"></i> Deals</span>
-            <span><i data-lucide="line-chart"></i> Reports</span>
-            <span><i data-lucide="settings"></i> Settings</span>
-          </aside>
 
-          <div class="hero-product-main">
-            <div class="hero-board-topbar arso-app-topbar">
+    <nav class="sidebar-nav">
+<a class="active" href="#dashboard" data-route="dashboard" data-tooltip="Dashboard"><i data-lucide="layout-dashboard"></i> <span>Dashboard</span></a>
+<a href="#pipeline" data-route="pipeline" data-tooltip="Pipeline"><i data-lucide="columns-3"></i><span>Pipeline</span></a>
+    </nav>
+  </div>
+
+  <!-- WORK -->
+  <div class="sidebar-group">
+    <div class="sidebar-label">Work</div>
+    <nav class="sidebar-nav">
+<a href="#projects" data-route="projects" data-tooltip="Projects"><i data-lucide="folder-kanban"></i> <span>Projects</span></a>
+<a href="#tasks" data-route="tasks" data-tooltip="Tasks"><i data-lucide="list-checks"></i> <span>Tasks</span></a>
+<a href="#clients" data-route="clients" data-tooltip="Clients"><i data-lucide="building-2"></i> <span>Clients</span></a>
+    </nav>
+  </div>
+
+  <!-- SYSTEM -->
+  <div class="sidebar-group">
+    <div class="sidebar-label">System</div>
+    <nav class="sidebar-nav">
+<a href="#activity" data-route="activity" data-tooltip="Activity"><i data-lucide="activity"></i> <span>Activity</span></a>
+<a href="#reports" data-route="reports" data-tooltip="Reports"><i data-lucide="bar-chart-3"></i> <span>Reports</span></a>
+<a href="#settings" data-route="settings" data-tooltip="Settings"><i data-lucide="settings"></i> <span>Settings</span></a>
+<button class="sidebar-logout-btn" id="logoutBtn" type="button" data-tooltip="Logout"><i data-lucide="log-out"></i> <span>Logout</span></button>
+    </nav>
+  </div>
+
+</aside>
+
+      <div class="sidebar-card">
+        <span>Demo Mode</span>
+        <strong>General Business Workflow</strong>
+        <p>Built to show how a lightweight CRM could replace scattered notes, spreadsheets, and manual follow-up.</p>
+      </div>
+    </aside>
+
+    <main class="demo-main">
+      <header class="demo-topbar">
+        <div>
+          <p class="eyebrow">CRM Demo Environment</p>
+          <h1 id="pageTitle">Workflow Dashboard</h1>
+          <p class="topbar-copy" id="pageCopy">Track new leads, discovery, proposals, builds, reviews, launches, and follow-up from one clean workspace.</p>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="global-search" id="globalSearch">
+            <i data-lucide="search"></i>
+            <input id="globalSearchInput" type="search" placeholder="Search CRM..." autocomplete="off" />
+            <div class="global-search-results" id="globalSearchResults" hidden></div>
+          </div>
+          <button class="primary-btn" id="quickAddBtn" type="button"><i data-lucide="zap"></i> Quick Add</button>
+          <button class="primary-btn" id="newProjectBtn"><i data-lucide="plus"></i> New Project</button>
+        </div>
+      </header>
+
+      <section class="crm-page is-active" data-page="dashboard">
+      <section class="summary-grid dashboard-summary-grid" aria-label="CRM summary metrics">
+        <article class="summary-card primary">
+          <span>Open Pipeline</span>
+          <strong id="dashboardPipelineValue">$0</strong>
+          <small><i data-lucide="trending-up"></i> Active project value</small>
+        </article>
+        <article class="summary-card">
+          <span>Active Projects</span>
+          <strong id="dashboardActiveProjects">0</strong>
+          <small id="dashboardActiveClientsText">Across 0 active clients</small>
+        </article>
+        <button class="summary-card dashboard-attention-card" id="dashboardNeedsAttentionCard" type="button">
+          <span>Needs Attention</span>
+          <strong id="dashboardNeedsAttention">0</strong>
+          <small id="dashboardAttentionText">Overdue and follow-up items</small>
+        </button>
+        <article class="summary-card">
+          <span>Task Progress</span>
+          <strong id="dashboardTaskProgress">0 / 0</strong>
+          <small>Open vs completed tasks</small>
+        </article>
+      </section>
+
+      <section class="dashboard-focus-grid">
+        <article class="panel dashboard-mini-panel attention">
+          <div class="panel-header compact">
+            <div>
+              <span class="panel-kicker">Attention</span>
+              <h2>Overdue tasks</h2>
+            </div>
+          </div>
+          <div class="dashboard-action-list" id="dashboardOverdueTasks"></div>
+        </article>
+
+        <article class="panel dashboard-mini-panel">
+          <div class="panel-header compact">
+            <div>
+              <span class="panel-kicker">Today</span>
+              <h2>Tasks due today</h2>
+            </div>
+          </div>
+          <div class="dashboard-action-list" id="dashboardTodayTasks"></div>
+        </article>
+
+        <article class="panel dashboard-mini-panel">
+          <div class="panel-header compact">
+            <div>
+              <span class="panel-kicker">Upcoming</span>
+              <h2>Deadlines</h2>
+            </div>
+          </div>
+          <div class="dashboard-action-list" id="dashboardUpcomingDeadlines"></div>
+        </article>
+      </section>
+
+      <section class="workspace-grid">
+        <div class="workspace-left">
+          <section class="panel" id="pipeline">
+            <div class="panel-header">
               <div>
-                <span class="hero-dashboard-kicker"><i data-lucide="trophy"></i> Sales Leaderboard</span>
-                <h3>Q4 Sales Sprint</h3>
+                <span class="panel-kicker">Project Pipeline</span>
+                <h2>Lead-Launch Workflow</h2>
               </div>
-              <span class="hero-dashboard-filter">This Month</span>
+              <button class="light-btn" id="togglePipelineFilters">
+  <i data-lucide="sliders-horizontal"></i> Filter
+</button>
             </div>
 
-            <div class="hero-performer-grid">
-              <article class="hero-performer-card arso-kpi-card is-winner">
-                <span class="hero-place gold">1</span>
-                <img src="/Assets/avatar-jose.jpg" alt="Jordan" class="hero-avatar">
-                <strong>Jordan Smith</strong>
-                <b>$128,430</b>
-                <small>135% of goal</small>
-                <div class="hero-goal-bar"><span style="width: 100%"></span></div>
-              </article>
-
-              <article class="hero-performer-card arso-kpi-card">
-                <span class="hero-place silver">2</span>
-                <img src="/Assets/avatar-taylor.jpg" alt="Taylor" class="hero-avatar">
-                <strong>Taylor Johnson</strong>
-                <b>$97,540</b>
-                <small>112% of goal</small>
-                <div class="hero-goal-bar"><span style="width: 82%"></span></div>
-              </article>
-
-              <article class="hero-performer-card arso-kpi-card">
-                <span class="hero-place bronze">3</span>
-                <img src="/Assets/avatar-sharon.jpg" alt="Casey" class="hero-avatar">
-                <strong>Casey Brown</strong>
-                <b>$84,230</b>
-                <small>98% of goal</small>
-                <div class="hero-goal-bar"><span style="width: 72%"></span></div>
-              </article>
-
-              <article class="hero-performer-card arso-kpi-card">
-                <span class="hero-place fourth">4</span>
-                <img src="/Assets/avatar-madi.jpg" alt="Morgan" class="hero-avatar">
-                <strong>Morgan Riley</strong>
-                <b>$72,890</b>
-                <small>85% of goal</small>
-                <div class="hero-goal-bar"><span style="width: 64%"></span></div>
-              </article>
-            </div>
-
-            <div class="hero-analytics-grid">
-              <article class="hero-analytics-card">
-                <span>Total Revenue</span>
-                <strong>$382,900 <em>&uarr; 18.6%</em></strong>
-                <svg viewBox="0 0 180 72" class="hero-line-chart" aria-hidden="true">
-                  <path d="M4 60 C20 26, 32 63, 46 42 S74 18, 88 43 S112 54, 126 30 S150 36, 176 8" />
-                </svg>
-              </article>
-
-              <article class="hero-analytics-card">
-                <span>Deals Closed</span>
-                <strong>46 <em>&uarr; 15.0%</em></strong>
-                <div class="hero-bar-chart" aria-hidden="true">
-                  <i style="height: 36%"></i><i style="height: 52%"></i><i style="height: 64%"></i><i style="height: 46%"></i><i style="height: 59%"></i><i style="height: 76%"></i><i style="height: 92%"></i>
-                </div>
-              </article>
-
-              <article class="hero-analytics-card hero-competitions-card">
-                <span>Active Competitions</span>
-                <strong>3</strong>
-                <div class="hero-competition-list">
-                  <p><i data-lucide="trophy"></i><span>Q4 Sales Challenge<small>Ends in 12 days</small></span></p>
-                  <p><i data-lucide="star"></i><span>Product Push<small>Ends in 19 days</small></span></p>
-                  <p><i data-lucide="badge-check"></i><span>Mega Month<small>Ends in 26 days</small></span></p>
-                </div>
-              </article>
-
-              <article class="hero-analytics-card hero-activity-card">
-                <span>Live Activity</span>
-                <small class="hero-activity-sub">Recent performance updates</small>
-                <div class="hero-activity-feed">
-                  <div class="hero-activity-track">
-                    <p><span></span> Morgan moved into the top 4</p>
-                    <p><span></span> Jordan closed a new enterprise deal</p>
-                    <p><span></span> Taylor hit 110% of monthly goal</p>
-                    <p><span></span> Casey added 4 qualified opportunities</p>
-                    <p><span></span> Morgan moved into the top 4</p>
-                    <p><span></span> Jordan closed a new enterprise deal</p>
-                    <p><span></span> Taylor hit 110% of monthly goal</p>
-                    <p><span></span> Casey added 4 qualified opportunities</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-            
-          </div>
-        </div>
-        
-      </div>
-        
-    </div>
-  </div>
-
-</section>
-<section id="featured-systems-early" class="section examples-section featured-systems-early" aria-label="Featured operational systems">
-  <div class="container">
-    <div class="section-heading left">
-      <span class="eyebrow">Featured Systems</span>
-      <h2>Start with the systems your team can actually see.</h2>
-      <p>Real-looking examples of practical operational tools ARSO can shape around daily work.</p>
-    </div>
-
-    <div class="projects-showcase">
-      <div class="projects-grid featured-systems-grid">
-<article id="crm-project-operations" class="project-card">
-	  <span class="project-tag">CRM Operations</span>
-<div class="project-mockup arso-app-shell crm-command-mockup">
-  <div class="crm-module-header">
-    <span class="crm-module-brand">
-      <img src="/Assets/icon-light.svg" alt="" aria-hidden="true">
-      <span>CRM</span>
-    </span>
-    <strong>Pipeline &amp; Operations</strong>
-  </div>
-  <p class="mockup-mini-subtitle">Pipeline, project health, tasks, and activity in one operating view.</p>
-
-  <div class="mock-crm mock-crm-command">
-    <div class="mock-crm-toolbar">
-      <button class="mock-toolbar-btn ghost">This Month</button>
-      <button class="mock-toolbar-btn primary">New Project</button>
-    </div>
-
-    <div class="mock-crm-top crm-command-kpis">
-      <div class="mock-crm-stat">
-        <span>Pipeline Value</span>
-        <strong>$248,000</strong>
-      </div>
-      <div class="mock-crm-stat">
-        <span>Active Projects</span>
-        <strong>12</strong>
-      </div>
-      <div class="mock-crm-stat">
-        <span>At Risk</span>
-        <strong>3</strong>
-      </div>
-      <div class="mock-crm-stat">
-        <span>Tasks Due</span>
-        <strong>18</strong>
-      </div>
-    </div>
-
-    <div class="crm-pipeline-board" aria-label="CRM pipeline">
-      <div class="crm-pipeline-col">
-        <div class="crm-pipeline-head"><span>Lead</span><strong>4</strong></div>
-        <article class="crm-deal-card">
-          <strong>Summit HVAC</strong>
-          <span>CRM & Leaderboard</span>
-          <em class="mock-status good">Healthy</em>
-        </article>
-        <article class="crm-deal-card">
-          <strong>State Farm Home/Auto</strong>
-          <span>Intake flow</span>
-          <em class="mock-status warn">Watch</em>
-        </article>
-      </div>
-
-      <div class="crm-pipeline-col">
-        <div class="crm-pipeline-head"><span>Discovery</span><strong>3</strong></div>
-        <article class="crm-deal-card">
-          <strong>Northline Supply</strong>
-          <span>Inventory management</span>
-          <em class="mock-status good">Healthy</em>
-        </article>
-      </div>
-
-      <div class="crm-pipeline-col">
-        <div class="crm-pipeline-head"><span>Proposal</span><strong>2</strong></div>
-        <article class="crm-deal-card">
-          <strong>BlueLife Mobile</strong>
-          <span>Operations dashboard</span>
-          <em class="mock-status warn">Watch</em>
-        </article>
-      </div>
-
-      <div class="crm-pipeline-col">
-        <div class="crm-pipeline-head"><span>Build</span><strong>5</strong></div>
-        <article class="crm-deal-card featured">
-          <strong>AR Field Services</strong>
-          <span>On-site training</span>
-          <em class="mock-status good">Healthy</em>
-        </article>
-        <article class="crm-deal-card">
-          <strong>Metro Retail</strong>
-          <span>AI data sync</span>
-          <em class="mock-status risk">At Risk</em>
-        </article>
-      </div>
-
-      <div class="crm-pipeline-col">
-        <div class="crm-pipeline-head"><span>Launch</span><strong>2</strong></div>
-        <article class="crm-deal-card">
-          <strong>Clinic Portal</strong>
-          <span>Intergration QA</span>
-          <em class="mock-status good">Healthy</em>
-        </article>
-      </div>
-    </div>
-
-    <div class="crm-activity-strip">
-      <span class="mock-status warn">Today</span>
-      <strong>Proposal review at 2:30 PM</strong>
-      <span>Northline Supply moved to Discovery</span>
-    </div>
-  </div>
-</div>
-
-<h3>CRM &amp; Project Operations</h3>
-
-<p>
-  A centralized command center for tracking pipeline, projects, tasks, and client work — replacing scattered spreadsheets with one clear operating view.
+           <p class="pipeline-hint">
+  Drag and drop to simulate workflow changes
 </p>
-
-<p>
-  It can also be used as a personal or team checklist system, with automated reminders and task tracking &mdash;
-  making it useful for everything from managing client work to keeping your own day organized.
-</p>
-
-<p class="project-outcome">
-  Result: fewer missed tasks, clearer priorities, and cleaner daily operations.
-</p>
-      </article>
-
-<article id="ai-workflow-assistant" class="project-card">
-<span class="project-tag">AI &amp; Automation</span>
-  <div class="project-mockup arso-app-shell ai-workflow-mockup">
-    <div class="crm-module-header ai-module-header">
-      <span class="crm-module-brand ai-module-brand">
-        <img src="/Assets/icon-light.svg" alt="" aria-hidden="true">
-        <span>Assist</span>
-      </span>
-      <strong>Workflow Assistant</strong>
-    </div>
-    <p class="mockup-mini-subtitle">AI-assisted summaries, follow-ups, routing, and operational workflow support.</p>
-
-    <div class="ai-ops-dashboard">
-      <div class="ai-summary-grid">
-        <div class="arso-kpi-card ai-summary-card">
-          <span>Emails Summarized</span>
-          <strong data-ai-kpi="emails">8</strong>
-          <em>2 urgent</em>
-        </div>
-        <div class="arso-kpi-card ai-summary-card">
-          <span>Tasks Routed</span>
-          <strong data-ai-kpi="tasks">3</strong>
-          <em>Ops queue</em>
-        </div>
-        <div class="arso-kpi-card ai-summary-card">
-          <span>Follow-ups</span>
-          <strong data-ai-kpi="followups">2</strong>
-          <em class="is-review">Review</em>
-        </div>
-        <div class="arso-kpi-card ai-summary-card">
-          <span>Reports</span>
-          <strong>1</strong>
-          <em>Complete</em>
-        </div>
-      </div>
-
-      <div class="ai-ops-main">
-        <div class="ai-activity-panel arso-app-card">
-          <div class="ai-panel-head">
-            <span>Workflow Activity</span>
-            <em>Live queue</em>
-          </div>
-          <div class="ai-activity-row">
-            <strong>CRM note drafted</strong>
-            <span>Northline Supply &bull; 10:44 AM</span>
-            <em class="ai-state complete">Complete</em>
-          </div>
-          <div class="ai-activity-row">
-            <strong>Client follow-up prepared</strong>
-            <span data-ai-time="followup">Proposal thread &bull; 10:31 AM</span>
-            <em class="ai-state review" data-ai-state="followup">Review</em>
-          </div>
-          <div class="ai-activity-row">
-            <strong>Meeting summary generated</strong>
-            <span>Project kickoff &bull; 9:58 AM</span>
-            <em class="ai-state complete">Complete</em>
-          </div>
-          <div class="ai-activity-row">
-            <strong>Vendor email categorized</strong>
-            <span data-ai-time="vendor">Inventory inbox &bull; 9:22 AM</span>
-            <em class="ai-state active">Routed</em>
-          </div>
-          <div class="ai-activity-row">
-            <strong>Task assigned to Operations</strong>
-            <span>Service request &bull; 8:47 AM</span>
-            <em class="ai-state complete">Active</em>
-          </div>
-          <div class="ai-activity-row">
-            <strong>Reminder scheduled</strong>
-            <span>Renewal check-in &bull; Tomorrow</span>
-            <em class="ai-state active" data-ai-state="reminder">Queued</em>
-          </div>
-        </div>
-
-        <div class="ai-side-panel">
-          <div class="ai-automation-panel arso-app-card">
-            <span class="ai-panel-label">Automation Status</span>
-            <div class="ai-automation-stat">
-              <strong>12</strong>
-              <span>Daily runs completed</span>
-            </div>
-            <div class="ai-queue-meter">
-              <span style="width: 76%"></span>
-            </div>
-            <div class="ai-automation-row">
-              <span>Processing</span>
-              <em class="ai-state active" data-ai-status="active">4 active</em>
-            </div>
-            <div class="ai-automation-row">
-              <span>Needs approval</span>
-              <em class="ai-state review" data-ai-status="waiting">2 waiting</em>
-            </div>
-          </div>
-
-          <div class="ai-actions-panel arso-app-card">
-            <span class="ai-panel-label">Suggested Actions</span>
-            <button type="button">Review proposal follow-up</button>
-            <button type="button">Approve drafted response</button>
-            <button type="button">Send onboarding summary</button>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="pipeline-controls" id="pipelineControls">
+  <div class="pipeline-search">
+    <i data-lucide="search"></i>
+    <input id="projectSearch" type="search" placeholder="Search projects, clients, contacts..." />
   </div>
 
-  <h3>AI Workflow Assistant</h3>
-  <p>
-    A practical AI workspace for summaries, follow-ups, reports, and workflow support.
-  </p>
-  <p>
-    The same concept can be adapted for internal operations, customer follow-up, reminders,
-    task coordination, or other repetitive work that slows teams down.
-  </p>
-  <p class="project-outcome">
-    Result: less manual busywork, faster follow-up, and cleaner handoffs.
-  </p>
-  <a href="ai-workflow-assistant.html" class="project-example-link project-detail-link">View AI Workflow Assistant</a>
-</article>
+  <select id="stageFilter">
+    <option value="all">All stages</option>
+    <option value="new">New</option>
+    <option value="discovery">Discovery</option>
+    <option value="proposal">Proposal</option>
+    <option value="build">Build</option>
+    <option value="launch">Test / Launch</option>
+    <option value="completed">Completed</option>
+    <option value="lost">Lost</option>
+  </select>
 
-      </div>
-    </div>
-  </div>
-</section>
-<section id="systems-we-build" class="section homepage-systems-section">
-  <div class="container">
-    <div class="section-heading left">
-      <span class="eyebrow">Systems We Build</span>
-      <h2>Operational systems we build</h2>
-      <p>
-        Practical systems designed around real workflows, visibility, and day-to-day operations.
-      </p>
-    </div>
-
-    <div class="homepage-system-preview-grid homepage-capability-grid" aria-label="Systems ARSO builds">
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="kanban"></i></div>
-        <span>CRM &amp; project operations</span>
-        <a href="crm-operations.html">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="boxes"></i></div>
-        <span>Inventory visibility</span>
-        <a href="inventory-visibility.html">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="bar-chart-3"></i></div>
-        <span>Reporting dashboards</span>
-        <a href="services.html#service-dashboards">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="check-check"></i></div>
-        <span>Approval workflows</span>
-        <a href="ai-workflow-assistant.html">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="sparkles"></i></div>
-        <span>AI workflow support</span>
-        <a href="ai-workflow-assistant.html">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="wrench"></i></div>
-        <span>Internal operational tools</span>
-        <a href="services.html#service-crm">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="graduation-cap"></i></div>
-        <span>Team readiness systems</span>
-        <a href="services.html#service-training">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="globe"></i></div>
-        <span>Customer intake &amp; web presence</span>
-        <a href="services.html#service-web-presence">View details</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="common-problems-home" class="section homepage-problems-section">
-  <div class="container">
-    <div class="section-heading left">
-      <span class="eyebrow">Common Problems</span>
-      <h2>Small operational problems become expensive when they keep repeating.</h2>
-      <p>
-        Most operational chaos starts as small recurring friction points like the ones below.
-      </p>
-    </div>
-
-    <div class="homepage-problem-groups" aria-label="Common operational problems">
-      <div class="homepage-problem-group">
-        <strong>Visibility &amp; Tracking</strong>
-        <div class="homepage-problem-chips">
-          <span>Too many spreadsheets</span>
-          <span>Status updates live in emails/texts</span>
-          <span>Reporting takes too much time</span>
-        </div>
-      </div>
-
-      <div class="homepage-problem-group">
-        <strong>Operational Friction</strong>
-        <div class="homepage-problem-chips">
-          <span>Managers chase follow-ups manually</span>
-          <span>Inventory questions take too long</span>
-          <span>Processes depend on memory</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="projects" class="section examples-section">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">More Systems</span>
-      <p>
-        Additional examples of practical operational systems designed around real workflows, teams, and day-to-day operations.
-      </p>
-    </div>
-
-    <div class="projects-showcase">
-      <div class="projects-featured">
-<article id="sales-performance-board" class="project-card featured">
-	  <span class="project-tag">Leaderboard System</span>
-        <div class="project-mockup project-mockup-lg arso-app-shell leaderboard-system-mockup">
-          <div class="crm-module-header leaderboard-module-header">
-            <span class="crm-module-brand leaderboard-module-brand">
-              <img src="/Assets/icon-light.svg" alt="" aria-hidden="true">
-              <span>Leaderboards</span>
-            </span>
-            <strong>Sales Performance Board</strong>
-            <span class="leaderboard-display-status"><i></i>Live Office Display</span>
-          </div>
-          <p class="mockup-mini-subtitle">Live sales rankings, goal progress, team momentum, and real-time performance visibility.</p>
-
-          <div class="leaderboard-dashboard">
-            <div class="leaderboard-kpis">
-              <div class="arso-kpi-card leaderboard-kpi">
-                <span>Total Revenue</span>
-                <strong data-board-kpi="sales">$382K</strong>
-                <em>+18.6%</em>
-              </div>
-              <div class="arso-kpi-card leaderboard-kpi">
-                <span>Deals Closed</span>
-                <strong data-board-kpi="deals">46</strong>
-                <em>Today</em>
-              </div>
-              <div class="arso-kpi-card leaderboard-kpi">
-                <span>Pipeline Added</span>
-                <strong data-board-kpi="pipeline">$128K</strong>
-                <em>New this week</em>
-              </div>
-              <div class="arso-kpi-card leaderboard-kpi">
-                <span>Team Goal %</span>
-                <strong data-board-kpi="goal">91%</strong>
-                <em class="is-watch">On pace</em>
-              </div>
-            </div>
-
-            <div class="leaderboard-main-grid">
-              <div class="leaderboard-rankings arso-app-card">
-                <div class="leaderboard-panel-head">
-                  <span>Live Rankings</span>
-                  <em data-board-updated>Updated 30 sec ago</em>
-                </div>
-
-                <div class="leaderboard-rank-window">
-                <div class="leaderboard-rank-list">
-                  <div class="leaderboard-rank-row is-leading" data-board-row="morgan">
-                    <span class="leaderboard-rank">1</span>
-                    <img src="/Assets/avatar-jose.jpg" alt="Morgan" class="leaderboard-avatar">
-                    <div>
-                      <strong>Morgan Riley</strong>
-                      <span>Enterprise Sales</span>
-                    </div>
-                    <b data-board-score="$128,430">$128,430</b>
-                    <em class="leaderboard-move positive">Goal hit</em>
-                    <div class="leaderboard-progress"><span style="width: 94%"></span></div>
-                  </div>
-
-                  <div class="leaderboard-rank-row" data-board-row="jordan">
-                    <span class="leaderboard-rank">2</span>
-                    <img src="/Assets/avatar-jordan.jpg" alt="Jordan" class="leaderboard-avatar">
-                    <div>
-                      <strong>Jordan Smith</strong>
-                      <span>Enterprise Sales</span>
-                    </div>
-                    <b data-board-score="$119,880">$119,880</b>
-                    <em class="leaderboard-move positive">+2 deals</em>
-                    <div class="leaderboard-progress"><span style="width: 90%"></span></div>
-                  </div>
-
-                  <div class="leaderboard-rank-row" data-board-row="taylor">
-                    <span class="leaderboard-rank">3</span>
-                    <img src="/Assets/avatar-taylor.jpg" alt="Taylor" class="leaderboard-avatar">
-                    <div>
-                      <strong>Taylor Johnson</strong>
-                      <span>Mid-Market Sales</span>
-                    </div>
-                    <b data-board-score="$104,260">$104,260</b>
-                    <em class="leaderboard-move positive">Up 1</em>
-                    <div class="leaderboard-progress"><span style="width: 84%"></span></div>
-                  </div>
-
-                  <div class="leaderboard-rank-row" data-board-row="casey">
-                    <span class="leaderboard-rank">4</span>
-                    <img src="/Assets/avatar-sharon.jpg" alt="Casey" class="leaderboard-avatar">
-                    <div>
-                      <strong>Casey Brown</strong>
-                      <span>Inbound Sales</span>
-                    </div>
-                    <b data-board-score="$96,410">$96,410</b>
-                    <em class="leaderboard-move watch">Close</em>
-                    <div class="leaderboard-progress"><span style="width: 78%"></span></div>
-                  </div>
-
-                  <div class="leaderboard-rank-row" data-board-row="riley">
-                    <span class="leaderboard-rank">5</span>
-                    <img src="/Assets/avatar-madi.jpg" alt="Riley" class="leaderboard-avatar">
-                    <div>
-                      <strong>Riley Chen</strong>
-                      <span>SMB Sales</span>
-                    </div>
-                    <b data-board-score="$88,730">$88,730</b>
-                    <em class="leaderboard-move positive">+3 demos</em>
-                    <div class="leaderboard-progress"><span style="width: 72%"></span></div>
-                  </div>
-
-                  <div class="leaderboard-rank-row" data-board-row="alex">
-                    <span class="leaderboard-rank">6</span>
-                    <img src="/Assets/avatar-alex.jpg" alt="Alex" class="leaderboard-avatar">
-                    <div>
-                      <strong>Alex Rivera</strong>
-                      <span>Mid-Market Sales</span>
-                    </div>
-                    <b data-board-score="$82,540">$82,540</b>
-                    <em class="leaderboard-move info">Pipeline</em>
-                    <div class="leaderboard-progress"><span style="width: 68%"></span></div>
-                  </div>
-
-                  <div class="leaderboard-rank-row" data-board-row="ashley">
-                    <span class="leaderboard-rank">7</span>
-                    <img src="/Assets/avatar-ashley.jpg" alt="Ashley" class="leaderboard-avatar">
-                    <div>
-                      <strong>Ashley Park</strong>
-                      <span>Inbound Sales</span>
-                    </div>
-                    <b data-board-score="$76,190">$76,190</b>
-                    <em class="leaderboard-move watch">Watch</em>
-                    <div class="leaderboard-progress"><span style="width: 63%"></span></div>
-                  </div>
-
-                  <div class="leaderboard-rank-row" data-board-row="matt">
-                    <span class="leaderboard-rank">8</span>
-                    <img src="/Assets/avatar-matt.jpg" alt="Matt" class="leaderboard-avatar">
-                    <div>
-                      <strong>Matt Davis</strong>
-                      <span>SMB Sales</span>
-                    </div>
-                    <b data-board-score="$69,840">$69,840</b>
-                    <em class="leaderboard-move positive">+1 deal</em>
-                    <div class="leaderboard-progress"><span style="width: 58%"></span></div>
-                  </div>
-
-                  <div class="leaderboard-rank-row" data-board-row="pat">
-                    <span class="leaderboard-rank">9</span>
-                    <img src="/Assets/avatar-pat.jpg" alt="Pat" class="leaderboard-avatar">
-                    <div>
-                      <strong>Pat Morgan</strong>
-                      <span>Enterprise Sales</span>
-                    </div>
-                    <b data-board-score="$63,520">$63,520</b>
-                    <em class="leaderboard-move info">Qualified</em>
-                    <div class="leaderboard-progress"><span style="width: 54%"></span></div>
-                  </div>
-
-                  <div class="leaderboard-rank-row" data-board-row="tara">
-                    <span class="leaderboard-rank">10</span>
-                    <img src="/Assets/avatar-tara.jpg" alt="Tara" class="leaderboard-avatar">
-                    <div>
-                      <strong>Tara Ellis</strong>
-                      <span>Inbound Sales</span>
-                    </div>
-                    <b data-board-score="$58,210">$58,210</b>
-                    <em class="leaderboard-move watch">Close</em>
-                    <div class="leaderboard-progress"><span style="width: 48%"></span></div>
-                  </div>
-                </div>
-                </div>
-
-              </div>
-
-              <div class="leaderboard-side-panel">
-                <div class="leaderboard-activity arso-app-card">
-                  <span class="leaderboard-panel-label">Momentum Feed</span>
-                  <div class="leaderboard-activity-row is-live" data-board-feed>
-                    <strong>Morgan closed 2 deals this week</strong>
-                    <span>Sales Team &bull; Just now</span>
-                  </div>
-                  <div class="leaderboard-activity-row">
-                    <strong>William S. hit 135% of monthly goal</strong>
-                    <span>Enterprise &bull; 4 min ago</span>
-                  </div>
-                  <div class="leaderboard-activity-row">
-                    <strong>Taylor added 4 qualified opportunities</strong>
-                    <span>Mid-Market &bull; 8 min ago</span>
-                  </div>
-                </div>
-
-                <div class="leaderboard-team-modules arso-app-card">
-                  <span class="leaderboard-panel-label">Sales Segments</span>
-                  <div class="leaderboard-team-row">
-                    <div>
-                      <strong>Enterprise</strong>
-                      <span>$148K</span>
-                    </div>
-                    <div class="leaderboard-segment-progress"><span style="width: 92%"></span></div>
-                  </div>
-                  <div class="leaderboard-team-row">
-                    <div>
-                      <strong>Mid-Market</strong>
-                      <span>$112K</span>
-                    </div>
-                    <div class="leaderboard-segment-progress"><span style="width: 78%"></span></div>
-                  </div>
-                  <div class="leaderboard-team-row">
-                    <div>
-                      <strong>SMB</strong>
-                      <span>$76K</span>
-                    </div>
-                    <div class="leaderboard-segment-progress"><span style="width: 64%"></span></div>
-                  </div>
-                  <div class="leaderboard-team-row">
-                    <div>
-                      <strong>Inbound</strong>
-                      <span>$50K</span>
-                    </div>
-                    <div class="leaderboard-segment-progress"><span style="width: 52%"></span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="leaderboard-display-strip">
-              <span><i></i>Sync Active</span>
-              <span>Display Mode: Office TV</span>
-              <span>Metric: Total Revenue</span>
-            </div>
-          </div>
-        </div>
-
-        <h3>Sales Performance Boards</h3>
-        <p>
-          Live sales boards for contests, closed revenue, pipeline momentum, and team visibility.
-        </p>
-        <ul class="project-points">
-          <li>Revenue rankings and goal progress</li>
-          <li>Pipeline momentum and deal activity</li>
-          <li>TV-ready visibility for sales teams</li>
-        </ul>
-        <p class="project-outcome">
-          Result: clearer sales momentum, stronger accountability, and a shared performance view everyone can follow.
-        </p>
-      </article>
-      </div>
-
-      <div class="projects-grid">
-
-
-            <article id="inventory-management-system" class="project-card">
-	  <span class="project-tag">Inventory Operations</span>
-<div class="project-mockup arso-app-shell inventory-control-mockup">
-  <div class="crm-module-header inventory-module-header">
-    <span class="crm-module-brand inventory-module-brand">
-      <img src="/Assets/icon-light.svg" alt="" aria-hidden="true">
-      <span>Inventory</span>
-    </span>
-    <strong>Inventory Control</strong>
-    <label class="inventory-search">
-      
-      <input type="search" placeholder="Search inventory..." aria-label="Search inventory">
-    </label>
-  </div>
-  <p class="mockup-mini-subtitle">Live inventory visibility, reorder tracking, vendors, and operational stock health.</p>
-
-  <div class="inventory-dashboard">
-    <div class="inventory-kpis">
-      <div class="arso-kpi-card inventory-kpi">
-        <span>In Stock</span>
-        <strong>1,284</strong>
-        <em>92% healthy</em>
-      </div>
-      <div class="arso-kpi-card inventory-kpi">
-        <span>Low Stock</span>
-        <strong>18</strong>
-        <em class="is-watch">Needs review</em>
-      </div>
-      <div class="arso-kpi-card inventory-kpi">
-        <span>Reorders</span>
-        <strong>7</strong>
-        <em>4 vendor drafts</em>
-      </div>
-      <div class="arso-kpi-card inventory-kpi">
-        <span>Locations</span>
-        <strong>4</strong>
-        <em>Live sync</em>
-      </div>
-    </div>
-
-    <div class="inventory-main-grid">
-      <div class="inventory-table arso-app-card">
-        <div class="inventory-table-head">
-          <span>Item</span>
-          <span>SKU</span>
-          <span>Qty</span>
-          <span>Status</span>
-          <span>Location</span>
-        </div>
-        <div class="inventory-row">
-          <strong>Air Filters</strong>
-          <span>AF-220</span>
-          <span>142</span>
-          <em class="inventory-status healthy">Healthy</em>
-          <span>Main WH</span>
-        </div>
-        <div class="inventory-row">
-          <strong>Valve Kits</strong>
-          <span>VK-018</span>
-          <span>24</span>
-          <em class="inventory-status watch">Low</em>
-          <span>Main WH</span>
-        </div>
-        <div class="inventory-row">
-          <strong>Field Tablets</strong>
-          <span>TB-104</span>
-          <span>6</span>
-          <em class="inventory-status info">Ordered</em>
-          <span>Service Van</span>
-        </div>
-        <div class="inventory-row">
-          <strong>Pump Seals</strong>
-          <span>PS-441</span>
-          <span>3</span>
-          <em class="inventory-status critical">Critical</em>
-          <span>N Annex</span>
-        </div>
-        <div class="inventory-row">
-          <strong>Sensor Packs</strong>
-          <span>SP-730</span>
-          <span>48</span>
-          <em class="inventory-status healthy">Healthy</em>
-          <span>Main WH</span>
-        </div>
-        <div class="inventory-row">
-          <strong>Cleaning Solution</strong>
-          <span>CS-110</span>
-          <span>36</span>
-          <em class="inventory-status healthy">Healthy</em>
-          <span>Supply Closet</span>
-        </div>
-        <div class="inventory-row">
-          <strong>Receipt Paper</strong>
-          <span>RP-508</span>
-          <span>12</span>
-          <em class="inventory-status watch">Low</em>
-          <span>Back Office</span>
-        </div>
-        <div class="inventory-row">
-          <strong>Brake Fluid</strong>
-          <span>LO-320</span>
-          <span>4</span>
-          <em class="inventory-status critical">Critical</em>
-          <span>N Annex</span>
-        </div>
-        <div class="inventory-row">
-          <strong>Tablet Chargers</strong>
-          <span>TC-212</span>
-          <span>18</span>
-          <em class="inventory-status info">Ordered</em>
-          <span>Service Van</span>
-        </div>
-        <div class="inventory-row">
-          <strong>Oil Filter</strong>
-          <span>SS-044</span>
-          <span>22</span>
-          <em class="inventory-status watch">Low</em>
-          <span>Main WH</span>
-        </div>
-        <div class="inventory-row">
-          <strong>Sharpies</strong>
-          <span>PL-612</span>
-          <span>64</span>
-          <em class="inventory-status healthy">Healthy</em>
-          <span>Back Office</span>
-        </div>
-      </div>
-
-      <div class="inventory-side-panel">
-        <div class="inventory-health-card arso-app-card">
-          <div>
-            <span>Stock Capacity</span>
-            <strong>86%</strong>
-          </div>
-          <div class="inventory-health-chart">
-            <i style="height: 42%"></i>
-            <i style="height: 58%"></i>
-            <i style="height: 46%"></i>
-            <i style="height: 72%"></i>
-            <i style="height: 64%"></i>
-            <i style="height: 86%"></i>
-          </div>
-        </div>
-
-        <div class="inventory-activity arso-app-card">
-          <span class="inventory-panel-label">Recent Movement</span>
-          <div class="inventory-activity-row">
-            <strong>Vendor shipment received</strong>
-            <span>AF-220 &bull; 10:42 AM</span>
-          </div>
-          <div class="inventory-activity-row">
-            <strong>Auto reorder triggered</strong>
-            <span>PS-441 &bull; 9:18 AM</span>
-          </div>
-          <div class="inventory-activity-row">
-            <strong>Stock transfer completed</strong>
-            <span>VK-018 &bull; Yesterday</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <select id="priorityFilter">
+    <option value="all">All priorities</option>
+    <option value="urgent">Urgent</option>
+    <option value="high">High</option>
+    <option value="normal">Normal</option>
+    <option value="low">Low</option>
+  </select>
+  <button class="clear-filters-btn" id="clearFilters">Clear</button>
 </div>
 
 
-<h3>Inventory Management System</h3>
 
-<p>
-  A real-time inventory dashboard for stock levels, reorders, vendors, and field assets.
-</p>
+<div class="pipeline-board project-workflow-board">
+  <!-- NEW -->
+<div class="pipeline-column" id="stage-new">
+  <div class="stage-header">
+    <strong><i data-lucide="newspaper"></i> New Lead</strong>
+    <span>$0</span>
+  </div>
+</div>
 
-<p>
-  Track stock movement, reorder needs, vendor activity, and location-level inventory health in one operating view.
-</p>
-
-      <p class="project-outcome">
-  Result: fewer stock surprises, faster ordering, and better visibility across locations.
-</p>
-      <a href="inventory-visibility.html" class="project-example-link project-detail-link">View Inventory System</a>
-      </article>
-
-      <article id="new-hire-readiness" class="project-card">
-        <span class="project-tag">Training System</span>
-        <div class="project-mockup arso-app-shell training-enable-mockup">
-          <div class="crm-module-header training-module-header">
-            <span class="crm-module-brand training-module-brand">
-              <img src="/Assets/icon-light.svg" alt="" aria-hidden="true">
-              <span>Training</span>
-            </span>
-            <strong>New Hire Readiness</strong>
-          </div>
-          <p class="mockup-mini-subtitle">Role-based onboarding, SOP completion, certifications, and manager visibility in one structured hub.</p>
-
-          <div class="training-dashboard">
-            <div class="training-kpis">
-              <div class="arso-kpi-card training-kpi">
-                <span>Active Paths</span>
-                <strong>3</strong>
-                <em>Live</em>
-              </div>
-              <div class="arso-kpi-card training-kpi">
-                <span>Completion</span>
-                <strong>82%</strong>
-                <em>+6% week</em>
-              </div>
-              <div class="arso-kpi-card training-kpi">
-                <span>Certified</span>
-                <strong>8/10</strong>
-                <em>Team ready</em>
-              </div>
-              <div class="arso-kpi-card training-kpi">
-                <span>Due This Week</span>
-                <strong>4</strong>
-                <em class="is-due">Review</em>
-              </div>
-            </div>
-
-            <div class="training-main-grid">
-              <div class="training-path-card arso-app-card">
-                <div class="training-panel-head">
-                  <div>
-                    <span class="training-panel-label">Training Path</span>
-                    <strong>New Hire Onboarding</strong>
-                  </div>
-                  <em>72%</em>
-                </div>
-                <div class="training-progress-track" aria-label="Client onboarding progress">
-                  <span class="training-progress-fill"></span>
-                </div>
-                <div class="training-module-list">
-                  <div class="training-module-row">
-                    <strong>Welcome &amp; Company Overview</strong>
-                    <em class="training-state complete">Complete</em>
-                  </div>
-                  <div class="training-module-row">
-                    <strong>Safety Procedures</strong>
-                    <em class="training-state complete">Complete</em>
-                  </div>
-                  <div class="training-module-row is-active">
-                    <strong>CRM &amp; Ticket Routing</strong>
-                    <em class="training-state active">In Progress</em>
-                  </div>
-                  <div class="training-module-row">
-                    <strong>Shift Checklist Review</strong>
-                    <em class="training-state next">Next</em>
-                  </div>
-                  <div class="training-module-row">
-                    <strong>Reporting Standards</strong>
-                    <em class="training-state locked">Locked</em>
-                  </div>
-                </div>
-              </div>
-
-              <div class="training-side-panel">
-                <div class="training-readiness-card arso-app-card">
-                  <div class="training-readiness-head">
-                    <div>
-                      <span class="training-panel-label">Team Readiness</span>
-                      <strong>New Hire Team</strong>
-                    </div>
-                    <span class="training-cert-badge">8 / 10 Ready</span>
-                  </div>
-                  <div class="training-readiness-meter">
-                    <span></span>
-                  </div>
-                  <div class="training-completions">
-                    <div class="training-completion-row">
-                      <strong>Sarah completed Safety Procedures</strong>
-                      <span>Just now</span>
-                    </div>
-                    <div class="training-completion-row">
-                      <strong>Mike passed CRM Ticket Routing</strong>
-                      <span>18 min ago</span>
-                    </div>
-                    <div class="training-completion-row">
-                      <strong>Jenna finished SOP Review</strong>
-                      <span>Today</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="training-assigned-card arso-app-card">
-                  <span class="training-panel-label">Assigned Training</span>
-                  <div class="training-assigned-row">
-                    <strong>Safety Checklist</strong>
-                    <em class="training-state next">Due Friday</em>
-                  </div>
-                  <div class="training-assigned-row">
-                    <strong>Ticket Workflow</strong>
-                    <em class="training-state active">Assigned</em>
-                  </div>
-                  <div class="training-assigned-row">
-                    <strong>Shift Opening Procedures</strong>
-                    <em class="training-state locked">Starts Next</em>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h3>New Hire &amp; Team Readiness</h3>
-        <p>
-          Structured onboarding, SOP delivery, and operational readiness tracking built around how your team actually works.
-        </p>
-        <ul class="project-points">
-          <li>Guided onboarding and role-based training</li>
-          <li>SOPs, certifications, and operational checklists</li>
-          <li>Team readiness and completion visibility</li>
-        </ul>
-        <p class="project-outcome">
-          Result: faster onboarding, clearer accountability, and more consistent operations.
-        </p>
-      </article>
-
-      </div>
-    </div>
-  </section>     
-
-<section id="how-we-work" class="section section-alt">
-  <div class="container">
-
-    <div class="section-heading">
-      <span class="eyebrow">How We Work</span>
-      <h2>From problem to practical system.</h2>
-      <p>We take messy workflows and turn them into clear, usable solutions using a simple, structured process.</p>
-    </div>
-
-    <div class="flow-chart">
-
-      <article class="flow-step">
-        <span class="flow-number">01</span>
-        <h3>Find the Friction</h3>
-        <p>We look at what's slowing things down, where time is being wasted, and where systems break.</p>
-      </article>
-
-      <article class="flow-step">
-        <span class="flow-number">02</span>
-        <h3>Design the Fix</h3>
-        <p>We map a simple, practical solution based on how your business actually operates.</p>
-      </article>
-
-      <article class="flow-step">
-        <span class="flow-number">03</span>
-        <h3>Build the System</h3>
-        <p>We create lightweight workflows, dashboards, automations, and operational tools your team can actually use.</p>
-      </article>
-
-      <article class="flow-step">
-        <span class="flow-number">04</span>
-        <h3>Launch & Improve</h3>
-        <p>We launch usable systems, gather feedback, and refine the tools around real day-to-day operations.</p>
-      </article>
+  <!-- DISCOVERY -->
+  <div class="pipeline-column" id="stage-discovery">
+    <div class="stage-header">
+      <strong><i data-lucide="search"></i> Discovery</strong>
+      <span>$0</span>
     </div>
   </div>
-</section>
 
-<section id="homepage-process-close" class="section homepage-closing-section">
-  <div class="container homepage-closing-card">
+  <!-- PROPOSAL -->
+  <div class="pipeline-column" id="stage-proposal">
+    <div class="stage-header">
+      <strong><i data-lucide="square-chart-gantt"></i> Proposal</strong>
+      <span>$0</span>
+    </div>
+  </div>
+
+  <!-- BUILD -->
+  <div class="pipeline-column" id="stage-build">
+    <div class="stage-header">
+      <strong><i data-lucide="cog"></i> Build</strong>
+      <span>$0</span>
+    </div>
+  </div>
+
+  <!-- LAUNCH -->
+  <div class="pipeline-column" id="stage-launch">
+    <div class="stage-header">
+      <strong><i data-lucide="rocket"></i> Test / Launch</strong>
+      <span>$0</span>
+    </div>
+  </div>
+</div>
+          </section>
+<section class="panel" id="allProjects">
+  <div class="panel-header">
     <div>
-      <span class="eyebrow">Process First</span>
-      <h2>Good systems start with understanding the work first.</h2>
-      <p>
-        Every business runs differently. ARSO builds practical systems around how your team already works.
-        ARSO Solutions Lab focuses on understanding where work slows down, where visibility breaks,
-        and where manual processes create unnecessary friction before recommending systems or automation.
-      </p>
-    </div>
-    <div class="homepage-closing-actions">
-      <a href="#contact-form" class="btn contact-form-trigger">Map My Process</a>
-      <a href="#contact-form" class="homepage-closing-link contact-form-trigger">Talk Through a Workflow</a>
+      <span class="panel-kicker">Active Projects</span>
+      <h2>Project health indicators</h2>
     </div>
   </div>
+
+  <div class="dashboard-action-list" id="dashboardProjectHealthList"></div>
 </section>
+          <section class="panel" id="dashboardClients">
+            <div class="panel-header">
+              <div>
+                <span class="panel-kicker">Clients</span>
+                <h2>Recently active clients</h2>
+              </div>
+              <button class="light-btn" id="dashboardViewClients" type="button">View All</button>
+            </div>
 
-     <section id="contact" class="section contact-section">
-  <div class="container">
-    <div class="contact-box">
-
-      <div class="contact-copy">
-        <span class="eyebrow">Work With ARSO</span>
-        <h2>Your team shouldn’t need workarounds to stay organized.</h2>
-
-        <p>
-          Most teams reach out because something in the day-to-day process feels harder than it should.
-          Tell us where work gets messy, and we’ll help map a practical process around how your team actually operates.
-        </p>
-
-        <ul class="contact-reassurance">
-          <li>No bloated software pitch</li>
-          <li>Built around your actual process</li>
-          <li>Practical systems your team can use</li>
-        </ul>
-
-        <div class="contact-actions">
-          <a href="#contact-form" class="btn contact-form-trigger contact-primary-cta">Map My Process<i data-lucide="arrow-big-right"></i></a>
-          <a href="#contact-form" class="btn btn-secondary contact-form-trigger">Talk Through a Process</a>
+            <div class="dashboard-action-list" id="dashboardActiveClients"></div>
+          </section>
         </div>
 
-        <p class="contact-note">
-          No pressure. Just a practical conversation about what’s slowing your team down.
-        </p>
-        <p class="contact-microcopy">
-          Most operational problems don’t need more software. They need clearer structure.
-        </p>
-      </div>
+        <aside class="workspace-right">
+          <section class="panel assistant-panel">
+            <div class="panel-header compact">
+              <div>
+                <span class="panel-kicker">Assistant</span>
+                <h2>Suggested focus</h2>
+              </div>
+              <i data-lucide="sparkles"></i>
+            </div>
+            <div class="recommendation-card" id="dashboardSuggestedFocus">
+              <strong>No urgent focus yet</strong>
+              <p>Your highest-priority CRM item will appear here.</p>
+            </div>
+          </section>
 
-      <div class="contact-form-panel">
-<div class="contact-form-intro">
-  <h3>Tell us what’s slowing your team down.</h3>
-  <p>Tell us what part of the day-to-day process keeps creating extra work, confusion, delays, repeated follow-up or if you just want to talk about it.</p>
-</div>
-<form 
-  action="https://formspree.io/f/xbdqypze" 
-  method="POST" 
-  class="contact-form"
-  id="contact-form"
->
+          <section class="panel">
+            <div class="panel-header compact">
+              <div>
+                <span class="panel-kicker">Tasks</span>
+                <h2>Today</h2>
+              </div>
+            </div>
+            <div class="dashboard-action-list" id="dashboardCompactTasks"></div>
+          </section>
 
-  <!-- Hidden fields -->
-<input type="hidden" name="_subject" value="New ARSO Inquiry">
-<input type="hidden" name="source" value="ARSO Solutions Lab Website">
-<input type="hidden" name="Submitted At" id="submittedAt">
-<textarea name="Lead Summary" id="leadSummary" hidden></textarea>
-<input type="hidden" name="_replyto" value="">
-<input type="hidden" name="_captcha" value="false">
-<input type="text" name="_gotcha" style="display:none">
-  <div class="form-field floating-field">
-    <input id="name" name="name" type="text" placeholder=" " required>
-    <label for="name">Name*</label>
-  </div>
+          <section class="panel" id="dashboardActivity">
+            <div class="panel-header compact">
+              <div>
+                <span class="panel-kicker">Live Activity</span>
+                <h2>Recent updates</h2>
+              </div>
+            </div>
+            <div class="activity-feed" id="dashboardRecentActivity"></div>
+          </section>
+        </aside>
+      </section>
+      </section>
 
-  <div class="form-field floating-field">
-    <input id="email" name="email" type="email" placeholder=" " required>
-    <label for="email">Email*</label>
-  </div>
+      <section class="crm-page" data-page="projects">
+        <section class="projects-layout">
+          <article class="panel projects-list-panel">
+            <div class="panel-header">
+              <div>
+                <span class="panel-kicker">Projects</span>
+                <h2>Project workspace</h2>
+              </div>
+              <button class="primary-btn small" id="newProjectPageBtn" type="button"><i data-lucide="plus"></i> New Project</button>
+            </div>
 
-  <div class="form-field floating-field form-field-full">
-    <input id="company" name="company" type="text" placeholder=" ">
-    <label for="company">Company</label>
-  </div>
+            <div class="project-page-toolbar">
+              <div class="pipeline-search">
+                <i data-lucide="search"></i>
+                <input id="projectPageSearch" type="search" placeholder="Search projects, clients, contacts..." />
+              </div>
 
-  <div class="form-field floating-field form-field-full">
-    <select id="category" name="category" required>
-      <option value="" disabled selected></option>
-      <option>CRM / Client Tracking</option>
-      <option>Inventory / Operations</option>
-      <option>Automation / Repetitive Tasks</option>
-      <option>Leaderboard / Reporting</option>
-      <option>Training / Onboarding</option>
-      <option>Web Presence / Customer Intake</option>
-      <option>Job Openings / Contract Work</option>
-      <option>Something Else / Not sure yet</option>
-    </select>
-    <label for="category">What would you like help improving?</label>
-  </div>
+              <select id="projectPageStatusFilter">
+                <option value="active">Active projects</option>
+                <option value="all">All projects</option>
+                <option value="new">New</option>
+                <option value="discovery">Discovery</option>
+                <option value="proposal">Proposal</option>
+                <option value="build">Build</option>
+                <option value="launch">Test / Launch</option>
+                <option value="completed">Completed</option>
+                <option value="lost">Lost</option>
+                <option value="archived">Archived</option>
+              </select>
+            </div>
 
-  <div class="form-field floating-field form-field-full">
-    <textarea id="message" name="message" rows="6" placeholder=" " required></textarea>
-    <label for="message">What part of the day tends to create extra work or confusion?</label>
-    <small class="field-help">
-      A few details are enough: where work slows down, what is being done manually, or anything you'd like to clean up.
-    </small>
-  </div>
+            <div class="client-table project-directory" id="projectPageList">
+              <div class="table-row table-head project-page-row">
+                <span>Project</span>
+                <span>Client</span>
+                <span>Status</span>
+                <span>Value</span>
+              </div>
+            </div>
+          </article>
 
-  <div class="form-submit">
-    <button type="submit" class="btn">Start the Conversation</button>
-  </div>
+          <article class="panel project-page-detail-panel">
+            <div class="panel-header">
+              <div>
+                <span class="panel-kicker">Project Details</span>
+                <h2 id="projectPageDetailTitle">Select a project</h2>
+              </div>
+              <div class="project-page-detail-actions">
+                <button class="light-btn" id="backToProjectsBtn" type="button"><i data-lucide="arrow-left"></i> Back to Projects</button>
+                <button class="light-btn" id="editProjectPageBtn" type="button" disabled><i data-lucide="pencil"></i> Edit</button>
+                <button class="light-btn danger" id="archiveProjectPageBtn" type="button" disabled><i data-lucide="archive"></i> Archive</button>
+                <button class="light-btn danger" id="deleteProjectPageBtn" type="button" disabled><i data-lucide="trash-2"></i> Delete</button>
+              </div>
+            </div>
 
-</form>
+            <div class="project-page-empty-state" id="projectPageEmptyState">
+              <i data-lucide="folder-kanban"></i>
+              <p>Choose a project to view delivery details, client context, and tasks.</p>
+            </div>
 
-<!-- Success Message -->
-<div id="form-success" style="display:none; margin-top:1rem;">
-  &check; Thanks! We'll be in touch shortly.
-</div>
-      </div>
+            <div class="project-page-detail-content" id="projectPageDetailContent" hidden>
+              <div class="project-page-detail-grid">
+                <div>
+                  <span>Client</span>
+                  <strong id="projectPageClient"></strong>
+                </div>
+                <div>
+                  <span>Status</span>
+                  <strong id="projectPageStatus"></strong>
+                </div>
+                <div>
+                  <span>Priority</span>
+                  <strong id="projectPagePriority"></strong>
+                </div>
+                <div>
+                  <span>Value</span>
+                  <strong id="projectPageValue"></strong>
+                </div>
+                <div>
+                  <span>Contact</span>
+                  <strong id="projectPageContact"></strong>
+                </div>
+                <div>
+                  <span>Due</span>
+                  <strong id="projectPageDue"></strong>
+                </div>
+              </div>
 
-    </div>
-  </div>
-</section>
+              <div class="project-page-notes">
+                <span>Notes</span>
+                <p id="projectPageNotes"></p>
+              </div>
 
-<!-- Assistant Toggle
-<button id="assistantToggle">&#128172;</button>
+              <div class="notes-timeline-block">
+                <div class="quick-note-row">
+                  <select id="projectNoteType">
+                    <option value="update">Update</option>
+                    <option value="internal">Internal</option>
+                    <option value="follow-up">Follow-Up</option>
+                    <option value="meeting">Meeting</option>
+                    <option value="issue">Issue</option>
+                    <option value="completed">Completed</option>
+                  </select>
+                  <input id="projectQuickNote" type="text" placeholder="Add a project note..." />
+                  <button class="light-btn" id="addProjectNoteBtn" type="button">Add</button>
+                </div>
+                <div class="notes-timeline-list" id="projectNotesTimeline"></div>
+              </div>
 
-<div class="assistant-widget" id="assistantWidget">
-  <div class="assistant-header">
-    <strong>What's slowing you down?</strong>
-    <p>Select one &mdash; we'll point you in the right direction.</p>
-  </div>
+              <div class="attachments-block">
+                <div class="panel-header compact">
+                  <div>
+                    <span class="panel-kicker">Files</span>
+                    <h2>Project attachments</h2>
+                  </div>
+                  <label class="attachment-upload-btn">
+                    <i data-lucide="paperclip"></i> Upload
+                    <input id="projectAttachmentInput" type="file" multiple />
+                  </label>
+                </div>
+                <div class="attachment-dropzone" id="projectAttachmentDropzone">
+                  Drop project files here or use Upload.
+                </div>
+                <div class="attachment-list" id="projectAttachmentList"></div>
+              </div>
 
+              <div class="project-page-tasks">
+                <div class="panel-header compact">
+                  <div>
+                    <span class="panel-kicker">Tasks</span>
+                    <h2>Associated tasks</h2>
+                  </div>
+                </div>
+                <div class="project-page-task-list" id="projectPageTaskList"></div>
+              </div>
 
-  <div class="assistant-options">
-    <button data-choice="crm">Messy spreadsheets / need a CRM</button>
-	<button data-choice="web">Improve online presence / website</button>
-    <button data-choice="automation">Manual processes / repetitive work</button>
-    <button data-choice="dashboard">Need visibility / reporting</button>
-    <button data-choice="integration">Systems don't talk to each other</button>
-    <button data-choice="other">Not sure yet</button>
-  </div>
+              <div class="project-page-activity">
+                <div class="panel-header compact">
+                  <div>
+                    <span class="panel-kicker">Activity</span>
+                    <h2>Project activity</h2>
+                  </div>
+                </div>
+                <div class="report-activity-summary" id="projectPageActivityList"></div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </section>
 
-  <div class="assistant-response" id="assistantResponse"></div>
-</div>
--->
-<!-- Assistant Toggle -->
-<button id="assistantToggle" type="button" aria-label="Open ARSO assistant">
-  <i data-lucide="info"></i>
-</button>
+      <section class="crm-page" data-page="tasks">
+        <section class="tasks-layout">
+          <article class="panel tasks-list-panel">
+            <div class="panel-header">
+              <div>
+                <span class="panel-kicker">Tasks</span>
+                <h2>Task command center</h2>
+              </div>
+              <button class="primary-btn small" id="newTaskPageBtn" type="button"><i data-lucide="plus"></i> New Task</button>
+            </div>
 
-<!-- Assistant -->
-<div class="assistant-widget" id="assistantWidget">
+            <div class="task-toolbar">
+              <div class="pipeline-search">
+                <i data-lucide="search"></i>
+                <input id="taskSearch" type="search" placeholder="Search tasks, projects, clients..." />
+              </div>
 
-  <div class="assistant-header">
-    <div class="assistant-title">
-      <img src="/Assets/favicon-16.svg" alt="AR" />
-      <div>
-        <strong>ARSO Lab Assistant<br></strong>
-        <span>What would help you?</span>
-      </div>
-    </div>
-  </div>
+              <select id="taskStatusFilter">
+                <option value="active">Active tasks</option>
+                <option value="all">All tasks</option>
+                <option value="todo">Todo</option>
+                <option value="doing">Doing</option>
+                <option value="done">Done</option>
+                <option value="archived">Archived</option>
+              </select>
+            </div>
 
-  <div class="assistant-options">
-    <button data-choice="crm">
-      <i data-lucide="table"></i>
-      <div>
-        <strong>Messy spreadsheets | CRM</strong>
+            <div class="client-table task-directory" id="taskPageList">
+              <div class="table-row table-head task-row">
+                <span>Task</span>
+                <span>Project</span>
+                <span>Status</span>
+                <span>Due</span>
+              </div>
+            </div>
+          </article>
 
-      </div>
-    </button>
-    <button data-choice="web">
-      <i data-lucide="globe"></i>
-      <div>
-        <strong>Website build/fix | Lead tool</strong>
+          <article class="panel task-detail-panel">
+            <div class="panel-header">
+              <div>
+                <span class="panel-kicker">Task Details</span>
+                <h2 id="taskDetailTitle">Select a task</h2>
+              </div>
+              <div class="task-detail-actions">
+                <button class="light-btn" id="backToTasksBtn" type="button"><i data-lucide="arrow-left"></i> Back to Tasks</button>
+                <button class="light-btn" id="editTaskPageBtn" type="button" disabled><i data-lucide="pencil"></i> Edit</button>
+                <button class="light-btn danger" id="archiveTaskPageBtn" type="button" disabled><i data-lucide="archive"></i> Archive</button>
+                <button class="light-btn danger" id="deleteTaskPageBtn" type="button" disabled><i data-lucide="trash-2"></i> Delete</button>
+              </div>
+            </div>
 
-      </div>
-    </button>
-    <button data-choice="automation">
-      <i data-lucide="zap"></i>
-      <div>
-        <strong>AI | Automation</strong>
-        
-      </div>
-    </button>
+            <div class="task-empty-state" id="taskEmptyState">
+              <i data-lucide="list-checks"></i>
+              <p>Choose a task to view details, project context, and client information.</p>
+            </div>
 
-    <button data-choice="dashboard">
-      <i data-lucide="bar-chart-3"></i>
-      <div>
-        <strong>Visibility/reporting | Dashboards</strong>
+            <div class="task-detail-content" id="taskDetailContent" hidden>
+              <div class="task-detail-grid">
+                <div>
+                  <span>Status</span>
+                  <strong id="taskDetailStatus"></strong>
+                </div>
+                <div>
+                  <span>Due Date</span>
+                  <strong id="taskDetailDueDate"></strong>
+                </div>
+                <div>
+                  <span>Project</span>
+                  <strong id="taskDetailProject"></strong>
+                </div>
+                <div>
+                  <span>Client</span>
+                  <strong id="taskDetailClient"></strong>
+                </div>
+              </div>
 
-      </div>
-    </button>
+              <div class="task-notes">
+                <span>Notes</span>
+                <p id="taskDetailNotes"></p>
+              </div>
 
-    <button data-choice="integration">
-      <i data-lucide="git-merge"></i>
-      <div>
-        <strong>Systems don't communicate | Integration</strong>
-		
-    </button>
+              <div class="notes-timeline-block">
+                <div class="quick-note-row">
+                  <select id="taskNoteType">
+                    <option value="update">Update</option>
+                    <option value="internal">Internal</option>
+                    <option value="follow-up">Follow-Up</option>
+                    <option value="meeting">Meeting</option>
+                    <option value="issue">Issue</option>
+                    <option value="completed">Completed</option>
+                  </select>
+                  <input id="taskQuickNote" type="text" placeholder="Add a task note..." />
+                  <button class="light-btn" id="addTaskNoteBtn" type="button">Add</button>
+                </div>
+                <div class="notes-timeline-list" id="taskNotesTimeline"></div>
+              </div>
 
+              <div class="attachments-block">
+                <div class="panel-header compact">
+                  <div>
+                    <span class="panel-kicker">Files</span>
+                    <h2>Task attachments</h2>
+                  </div>
+                  <label class="attachment-upload-btn">
+                    <i data-lucide="paperclip"></i> Upload
+                    <input id="taskAttachmentInput" type="file" multiple />
+                  </label>
+                </div>
+                <div class="attachment-dropzone" id="taskAttachmentDropzone">
+                  Drop task files here or use Upload.
+                </div>
+                <div class="attachment-list" id="taskAttachmentList"></div>
+              </div>
 
-  </div>
+              <div class="task-page-activity">
+                <div class="panel-header compact">
+                  <div>
+                    <span class="panel-kicker">Activity</span>
+                    <h2>Task activity</h2>
+                  </div>
+                </div>
+                <div class="report-activity-summary" id="taskPageActivityList"></div>
+              </div>
+            </div>
+          </article>
+        </section>
 
-  <div class="assistant-response" id="assistantResponse"></div>
+        <section class="panel task-form-panel" id="taskFormPanel" hidden>
+          <div class="panel-header">
+            <div>
+              <span class="panel-kicker">Task</span>
+              <h2 id="taskFormTitle">Add task</h2>
+            </div>
+            <button class="modal-close" id="cancelTaskForm" type="button">×</button>
+          </div>
 
-</div>
+          <form id="taskPageForm" class="task-page-form">
+            <input type="hidden" id="taskPageId" />
+            <label>
+              Title
+              <input id="taskTitleInput" type="text" required placeholder="Example: Send project recap" />
+            </label>
+            <label>
+              Project
+              <select id="taskProjectInput">
+                <option value="">No project</option>
+              </select>
+            </label>
+            <label>
+              Status
+              <select id="taskStatusInput">
+                <option value="todo">Todo</option>
+                <option value="doing">Doing</option>
+                <option value="done">Done</option>
+                <option value="archived">Archived</option>
+              </select>
+            </label>
+            <label>
+              Due Date
+              <input id="taskDueDateInput" type="date" />
+            </label>
+            <label class="task-notes-field">
+              Notes
+              <textarea id="taskNotesInput"></textarea>
+            </label>
+            <div class="task-form-actions">
+              <button class="primary-btn" id="saveTaskPageBtn" type="submit">Save Task</button>
+              <button class="ghost-btn" id="cancelTaskFormSecondary" type="button">Cancel</button>
+            </div>
+          </form>
+        </section>
+      </section>
+
+      <section class="crm-page" data-page="clients">
+        <section class="clients-layout">
+          <article class="panel clients-list-panel">
+            <div class="panel-header">
+              <div>
+                <span class="panel-kicker">Clients</span>
+                <h2>Client directory</h2>
+              </div>
+              <button class="primary-btn small" id="newClientBtn" type="button"><i data-lucide="plus"></i> New Client</button>
+            </div>
+
+            <div class="client-toolbar">
+              <div class="pipeline-search">
+                <i data-lucide="search"></i>
+                <input id="clientSearch" type="search" placeholder="Search clients, contacts, email..." />
+              </div>
+              <select id="clientStatusFilter" aria-label="Filter clients by status">
+                <option value="active">Active clients</option>
+                <option value="all">All clients</option>
+                <option value="archived">Archived</option>
+                <option value="inactive">Pending / inactive</option>
+              </select>
+            </div>
+
+            <div class="client-table client-directory" id="clientList">
+              <div class="table-row table-head client-row">
+                <span>Client</span>
+                <span>Contact</span>
+                <span>Status</span>
+                <span>Projects</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel client-detail-panel">
+            <div class="panel-header">
+              <div>
+                <span class="panel-kicker">Client Details</span>
+                <h2 id="clientDetailTitle">Select a client</h2>
+              </div>
+              <div class="client-detail-actions">
+                <button class="light-btn" id="backToClientsBtn" type="button"><i data-lucide="arrow-left"></i> Back to Clients</button>
+                <button class="light-btn" id="editClientBtn" type="button" disabled><i data-lucide="pencil"></i> Edit</button>
+                <button class="light-btn danger" id="archiveClientBtn" type="button" disabled><i data-lucide="archive"></i> Archive</button>
+                <button class="light-btn danger" id="deleteClientBtn" type="button" disabled><i data-lucide="trash-2"></i> Delete</button>
+              </div>
+            </div>
+
+            <div class="client-empty-state" id="clientEmptyState">
+              <i data-lucide="building-2"></i>
+              <p>Choose a client to view profile details and associated projects.</p>
+            </div>
+
+            <div class="client-detail-content" id="clientDetailContent" hidden>
+              <div class="client-detail-grid">
+                <div>
+                  <span>Company</span>
+                  <strong id="clientCompany"></strong>
+                </div>
+                <div>
+                  <span>Contact</span>
+                  <strong id="clientContact"></strong>
+                </div>
+                <div>
+                  <span>Email</span>
+                  <strong id="clientEmail"></strong>
+                </div>
+                <div>
+                  <span>Phone</span>
+                  <strong id="clientPhone"></strong>
+                </div>
+                <div>
+                  <span>Website</span>
+                  <strong id="clientWebsite"></strong>
+                </div>
+                <div>
+                  <span>Status</span>
+                  <strong id="clientStatus"></strong>
+                </div>
+              </div>
+
+              <div class="client-notes">
+                <span>Notes</span>
+                <p id="clientNotes"></p>
+              </div>
+
+              <div class="notes-timeline-block">
+                <div class="quick-note-row">
+                  <select id="clientNoteType">
+                    <option value="update">Update</option>
+                    <option value="internal">Internal</option>
+                    <option value="follow-up">Follow-Up</option>
+                    <option value="meeting">Meeting</option>
+                    <option value="issue">Issue</option>
+                    <option value="completed">Completed</option>
+                  </select>
+                  <input id="clientQuickNote" type="text" placeholder="Add a client note..." />
+                  <button class="light-btn" id="addClientNoteBtn" type="button">Add</button>
+                </div>
+                <div class="notes-timeline-list" id="clientNotesTimeline"></div>
+              </div>
+
+              <div class="attachments-block">
+                <div class="panel-header compact">
+                  <div>
+                    <span class="panel-kicker">Files</span>
+                    <h2>Client attachments</h2>
+                  </div>
+                  <label class="attachment-upload-btn">
+                    <i data-lucide="paperclip"></i> Upload
+                    <input id="clientAttachmentInput" type="file" multiple />
+                  </label>
+                </div>
+                <div class="attachment-dropzone" id="clientAttachmentDropzone">
+                  Drop client files here or use Upload.
+                </div>
+                <div class="attachment-list" id="clientAttachmentList"></div>
+              </div>
+
+              <div class="client-projects">
+                <div class="panel-header compact">
+                  <div>
+                    <span class="panel-kicker">Projects</span>
+                    <h2>Associated projects</h2>
+                  </div>
+                </div>
+                <div class="client-project-list" id="clientProjectList"></div>
+              </div>
+
+              <div class="client-page-activity">
+                <div class="panel-header compact">
+                  <div>
+                    <span class="panel-kicker">Activity</span>
+                    <h2>Client activity</h2>
+                  </div>
+                </div>
+                <div class="report-activity-summary" id="clientPageActivityList"></div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel client-form-panel" id="clientFormPanel" hidden>
+          <div class="panel-header">
+            <div>
+              <span class="panel-kicker">Client</span>
+              <h2 id="clientFormTitle">Add client</h2>
+            </div>
+            <button class="modal-close" id="cancelClientForm" type="button">×</button>
+          </div>
+
+          <form id="clientForm" class="client-form">
+            <input type="hidden" id="clientId" />
+            <label>
+              Client Name
+              <input id="clientNameInput" type="text" required placeholder="Example: Summit HVAC" />
+            </label>
+            <label>
+              Company
+              <input id="clientCompanyInput" type="text" placeholder="Example: Summit HVAC LLC" />
+            </label>
+            <label>
+              Contact Name
+              <input id="clientContactInput" type="text" />
+            </label>
+            <label>
+              Email
+              <input id="clientEmailInput" type="email" />
+            </label>
+            <label>
+              Phone
+              <input id="clientPhoneInput" type="tel" />
+            </label>
+            <label>
+              Website
+              <input id="clientWebsiteInput" type="text" />
+            </label>
+            <label>
+              Status
+              <select id="clientStatusInput">
+                <option value="active">Active</option>
+                <option value="lead">Lead</option>
+                <option value="inactive">Inactive</option>
+                <option value="archived">Archived</option>
+              </select>
+            </label>
+            <label class="client-notes-field">
+              Notes
+              <textarea id="clientNotesInput"></textarea>
+            </label>
+            <div class="client-form-actions">
+              <button class="primary-btn" id="saveClientBtn" type="submit">Save Client</button>
+              <button class="ghost-btn" id="cancelClientFormSecondary" type="button">Cancel</button>
+            </div>
+          </form>
+        </section>
+      </section>
+
+      <section class="crm-page" data-page="activity">
+        <section class="activity-page-layout">
+          <article class="panel activity-page-panel">
+            <div class="panel-header">
+              <div>
+                <span class="panel-kicker">Activity</span>
+                <h2>Activity timeline</h2>
+              </div>
+              <button class="light-btn" id="refreshActivityBtn" type="button"><i data-lucide="refresh-cw"></i> Refresh</button>
+            </div>
+
+            <div class="activity-page-toolbar">
+              <div class="pipeline-search">
+                <i data-lucide="search"></i>
+                <input id="activitySearch" type="search" placeholder="Search activity, clients, projects, tasks..." />
+              </div>
+
+              <select id="activityTypeFilter">
+                <option value="all">All activity</option>
+                <option value="client">Clients</option>
+                <option value="project">Projects</option>
+                <option value="task">Tasks</option>
+                <option value="note">Notes</option>
+                <option value="status">Status changes</option>
+              </select>
+            </div>
+
+            <div class="activity-timeline-list" id="activityTimelineList"></div>
+          </article>
+        </section>
+      </section>
+
+      <section class="crm-page" data-page="reports">
+        <section class="reports-page">
+          <section class="reports-kpi-grid">
+            <article class="report-kpi-card primary report-action-card" data-report-action="active-projects">
+              <span>Active Projects</span>
+              <strong id="reportActiveProjects">0</strong>
+              <small id="reportProjectsSubtext">View projects</small>
+            </article>
+            <article class="report-kpi-card report-action-card" id="reportPastDueCard" data-report-action="past-due-items">
+              <span>Past Due</span>
+              <strong id="reportPastDueItems">0</strong>
+              <small id="reportPastDueSubtext">View past due items</small>
+            </article>
+            <article class="report-kpi-card report-action-card" data-report-action="pipeline-projects">
+              <span>Pipeline Value</span>
+              <strong id="reportPipelineValue">$0</strong>
+              <small>View pipeline projects</small>
+            </article>
+            <article class="report-kpi-card report-action-card" data-report-action="completed-projects">
+              <span>Completed Revenue</span>
+              <strong id="reportCompletedRevenue">$0</strong>
+              <small id="reportCompletedProjects">View completed projects</small>
+            </article>
+          </section>
+
+          <section class="reports-grid">
+            <article class="panel report-panel">
+              <div class="panel-header compact">
+                <div>
+                  <span class="panel-kicker">Priorities</span>
+                  <h2>Tasks by priority</h2>
+                </div>
+              </div>
+              <div class="report-priority-chart" id="reportTasksByPriority"></div>
+            </article>
+
+            <article class="panel report-panel report-drilldown" id="reportDrilldownPanel">
+              <div class="panel-header compact">
+                <div>
+                  <span class="panel-kicker">Details</span>
+                  <h2 id="reportDrilldownTitle">Report details</h2>
+                </div>
+                <button class="light-btn small" id="reportDrilldownClose" type="button">Close</button>
+              </div>
+              <div class="report-drilldown-list" id="reportDrilldownList">
+                <div class="attachment-empty">Select a report metric, priority, pipeline stage, or activity item to view details.</div>
+              </div>
+            </article>
+          </section>
+
+          <section class="panel report-panel report-pipeline-panel">
+            <div class="panel-header">
+              <div>
+                <span class="panel-kicker">Pipeline</span>
+                <h2>Project pipeline by stage</h2>
+              </div>
+            </div>
+            <div class="report-pipeline-board" id="reportPipelineBoard"></div>
+          </section>
+
+          <section class="panel report-panel report-pipeline-panel">
+            <div class="panel-header">
+              <div>
+                <span class="panel-kicker">Tasks</span>
+                <h2>Task pipeline by status</h2>
+              </div>
+            </div>
+            <div class="report-pipeline-board report-task-pipeline-board" id="reportTaskPipelineBoard"></div>
+          </section>
+
+          <section class="panel report-panel">
+            <div class="panel-header compact">
+              <div>
+                <span class="panel-kicker">Activity</span>
+                <h2>Recent summary</h2>
+              </div>
+            </div>
+            <div class="report-activity-summary" id="reportActivitySummary"></div>
+          </section>
+        </section>
+      </section>
+
+      <section class="crm-page" data-page="settings">
+        <section class="page-shell-grid">
+          <article class="panel page-shell-panel">
+            <div class="panel-header">
+              <div>
+                <span class="panel-kicker">Settings</span>
+                <h2>Workspace settings</h2>
+              </div>
+              <i data-lucide="settings"></i>
+            </div>
+            <p>User preferences, workspace defaults, and CRM configuration will be managed here.</p>
+          </article>
+
+          <article class="panel page-shell-panel">
+            <div class="panel-header compact">
+              <div>
+                <span class="panel-kicker">Next</span>
+                <h2>Planned sections</h2>
+              </div>
+            </div>
+            <div class="shell-list">
+              <span>Profile</span>
+              <span>Notifications</span>
+              <span>Workflow defaults</span>
+            </div>
+          </article>
+        </section>
+      </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div class="footer-brand">
-          <a href="#top" aria-label="ARSO Solutions Lab home">
-            <img src="/Assets/logo-full.svg" alt="ARSO Solutions Lab" class="footer-logo" />
-          </a>
-          <p>Practical operational systems built for real day-to-day work.</p>
-          <span>Built around how teams actually operate.</span>
+  </div>
+</div>
+  <!-- Global Quick Add -->
+  <div class="modal-backdrop" id="quickAddModal" aria-hidden="true">
+    <div class="quick-add-modal">
+      <div class="modal-header">
+        <div>
+          <span class="panel-kicker">Quick Add</span>
+          <h2>Create something fast</h2>
         </div>
-
-        <nav class="footer-nav" aria-label="Footer services navigation">
-          <h3>Services</h3>
-          <a href="crm-operations.html">CRM Systems</a>
-          <a href="services.html#service-dashboards">Operations Dashboards</a>
-          <a href="inventory-visibility.html">Inventory Systems</a>
-          <a href="services.html#service-ai">Process Automation</a>
-          <a href="ai-workflow-assistant.html">AI Tools</a>
-          <a href="services.html#service-training">Team Enablement</a>
-          <a href="services.html#service-web-presence">Web Presence &amp; Intake</a>
-        </nav>
-
-        <nav class="footer-nav" aria-label="Footer company navigation">
-          <h3>Company</h3>
-          <a href="about.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="case-studies.html">Case Studies</a>
-          <a href="#how-we-work">How We Work</a>
-          <a href="careers.html">Careers</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="footer-cta">
-          <p>Most operational problems don’t need more software. They need clearer systems.</p>
-          <a href="#contact" class="footer-cta-link">Map My Process</a>
-        </div>
+        <button class="modal-close" id="closeQuickAddModal" type="button">×</button>
       </div>
 
-      <div class="container footer-bottom">
-        <p>&copy; 2026 ARSO Solutions Lab</p>
-        <nav aria-label="Footer legal navigation">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="careers.html">Careers</a>
-          <a href="#contact">Contact</a>
-        </nav>
+      <form id="quickAddForm" class="quick-add-form">
+        <label>
+          Type
+          <select id="quickAddType">
+            <option value="client">Client</option>
+            <option value="project">Project</option>
+            <option value="task">Task</option>
+            <option value="note">Note</option>
+          </select>
+        </label>
+
+        <p class="quick-add-context" id="quickAddContext">No related record selected.</p>
+
+        <div class="quick-add-fields" id="quickAddFields"></div>
+
+        <div class="quick-add-actions">
+          <button class="primary-btn" id="saveQuickAddBtn" type="submit">Create</button>
+          <button class="ghost-btn" id="cancelQuickAddBtn" type="button">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- New Project Lead Module -->
+
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true">
+  <div class="project-modal">
+    <div class="modal-header">
+      <div>
+        <span class="panel-kicker">New Project</span>
+        <h2>Create project lead</h2>
       </div>
-    </footer>
-
-    <script src="script.js"></script>
-	<script>
-  lucide.createIcons();
-</script>
-<!--Assitant Widget-->
-<!--script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const toggle = document.getElementById("assistantToggle");
-  const widget = document.getElementById("assistantWidget");
-  const responseBox = document.getElementById("assistantResponse");
-
-  const responses = {
-    crm: "Sounds like a CRM + workflow system would help...",
-    automation: "This is exactly where automation helps...",
-    dashboard: "A custom dashboard can give you real-time visibility...",
-    integration: "We can connect your systems into one clean workflow...",
-    web: "We can improve your website and turn it into a lead-generating tool...",
-    other: "Tell us what's frustrating and we'll map it out."
-  };
-
-  // Toggle open/close
-  toggle.addEventListener("click", () => {
-    widget.classList.toggle("open");
-
-    toggle.textContent = widget.classList.contains("open") ? "\u00d7" : "\ud83d\udcac";
-  });
-
-  // Option click handling
-  document.querySelectorAll(".assistant-options button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const choice = btn.dataset.choice;
-
-      responseBox.innerHTML = `
-        <p>${responses[choice]}</p>
-        <a href="#contact" class="assistant-cta">Tell us about it &rarr;</a>
-      `;
-    });
-  });
-
-  /* Add it right here (bottom of DOMContentLoaded) */
-
-  // Pulse after 5 seconds (only if not opened)
-  setTimeout(() => {
-    if (!widget.classList.contains("open")) {
-      toggle.classList.add("pulse");
-
-      setTimeout(() => {
-        toggle.classList.remove("pulse");
-      }, 1200);
-    }
-  }, 5000);
-
-});
-</script-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  lucide.createIcons();
-
-  const toggle = document.getElementById("assistantToggle");
-  const widget = document.getElementById("assistantWidget");
-  const responseBox = document.getElementById("assistantResponse");
-
-  const responses = {
-    crm: {
-      label: "CRM & Workflow",
-      message: "I'm interested in cleaning up messy spreadsheets or building a CRM/workflow system.",
-      response: "Recommended: CRM + workflow system to eliminate spreadsheet chaos."
-    },
-    automation: {
-      label: "AI & Automation",
-      message: "I'm interested in automating manual or repetitive work in my business.",
-      response: "Recommended: automation system to remove repetitive tasks and save time."
-    },
-    dashboard: {
-      label: "Leaderboard System",
-      message: "I'm interested in a dashboard or reporting system to improve visibility.",
-      response: "Recommended: real-time dashboard for visibility into your sales and operations."
-    },
-    integration: {
-      label: "Custom Product",
-      message: "I'm interested in connecting tools or systems that currently do not work well together.",
-      response: "Recommended: connect your tools into one clean workflow."
-    },
-    web: {
-      label: "Custom Product",
-      message: "I'm interested in building/improving my website or online presence so it generates more leads.",
-      response: "Recommended: optimize or build your website to capture and convert leads effectively."
-    }
-  };
-
-  toggle.addEventListener("click", () => {
-    widget.classList.toggle("open");
-
-    toggle.innerHTML = widget.classList.contains("open")
-      ? "\u00d7"
-      : '<i data-lucide="info"></i>';
-
-    lucide.createIcons();
-  });
-
-  document.querySelectorAll(".assistant-options button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const choice = btn.dataset.choice;
-      const item = responses[choice];
-
-      responseBox.innerHTML = `
-        <strong>Recommended starting point</strong>
-        <p>${item.response}</p>
-        <button class="assistant-cta" data-start="${choice}">Start with this &rarr;</button>
-      `;
-    });
-  });
-
-  document.addEventListener("click", (e) => {
-    const startBtn = e.target.closest(".assistant-cta");
-    if (!startBtn) return;
-
-    const choice = startBtn.dataset.start;
-    const item = responses[choice];
-
-    const contact = document.getElementById("contact");
-    const interest = document.getElementById("interest");
-    const reason = document.getElementById("reason");
-    const message = document.getElementById("message");
-
-    if (interest) interest.value = item.label;
-    if (reason) reason.value = "General Question";
-
-    if (message) {
-      message.value = item.message;
-      message.dispatchEvent(new Event("input", { bubbles: true }));
-    }
-
-    if (contact) {
-	startBtn.textContent = "Opening form...";
-      contact.scrollIntoView({ behavior: "smooth" });
-    }
-
-    widget.classList.remove("open");
-    toggle.innerHTML = '<i data-lucide="info"></i>';
-    lucide.createIcons();
-  });
-
-  setTimeout(() => {
-    if (!widget.classList.contains("open")) {
-      toggle.classList.add("pulse");
-      setTimeout(() => toggle.classList.remove("pulse"), 1200);
-    }
-  }, 5000);
-
-});
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const tickerMessages = [
-      'Casey just closed a deal! <strong>+3</strong>',
-      'Morgan hit daily target! <strong>+5</strong>',
-      'Jordan moved to #1! <strong>&uarr;</strong>'
-    ];
-
-    let tickerIndex = 0;
-    const tickerEl = document.getElementById('tickerText');
-
-    if (!tickerEl) return; // safety check
-
-    setInterval(() => {
-      tickerIndex = (tickerIndex + 1) % tickerMessages.length;
-
-      tickerEl.classList.add('fade-out');
-
-      setTimeout(() => {
-        tickerEl.innerHTML = tickerMessages[tickerIndex];
-
-        tickerEl.classList.remove('fade-out');
-        tickerEl.classList.add('fade-in');
-
-        setTimeout(() => {
-          tickerEl.classList.remove('fade-in');
-        }, 250);
-
-      }, 250);
-
-    }, 3500);
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const track = document.querySelector('.mockup-list-track');
-    if (!track) return;
-
-    function getPrimaryRows() {
-      const rows = Array.from(track.querySelectorAll('.mockup-row'));
-      return rows.slice(0, rows.length / 2);
-    }
-
-    function syncDuplicateRows() {
-      const allRows = Array.from(track.querySelectorAll('.mockup-row'));
-      const half = allRows.length / 2;
-      const primary = allRows.slice(0, half);
-      const duplicate = allRows.slice(half);
-
-      primary.forEach((row, index) => {
-        duplicate[index].innerHTML = row.innerHTML;
-        duplicate[index].className = row.className;
-        duplicate[index].setAttribute('data-player', row.getAttribute('data-player') || '');
-      });
-    }
-
-    function updateRanks() {
-      const rows = getPrimaryRows();
-      rows.forEach((row, index) => {
-        const rankEl = row.querySelector('.mockup-rank');
-        if (rankEl) rankEl.textContent = index + 1;
-
-        row.classList.toggle('is-first', index === 0);
-      });
-      syncDuplicateRows();
-    }
-
-    function bumpRandomScore() {
-      const rows = getPrimaryRows();
-      const row = rows[Math.floor(Math.random() * rows.length)];
-      if (!row) return;
-
-      const scoreEl = row.querySelector('.mockup-score');
-      if (!scoreEl) return;
-
-      const current = Number(scoreEl.textContent.replace(/[$,]/g, '')) || 0;
-      const increase = Math.floor(Math.random() * 1200 + 300);
-      const next = current + increase;
-
-      scoreEl.textContent = '$' + next.toLocaleString();
-      row.classList.add('row-updated');
-      scoreEl.classList.add('score-bump');
-
-      setTimeout(() => {
-        row.classList.remove('row-updated');
-        scoreEl.classList.remove('score-bump');
-      }, 1200);
-
-      maybeSwapRows();
-      syncDuplicateRows();
-    }
-
-    function maybeSwapRows() {
-      const rows = getPrimaryRows();
-
-      // Sort rows by score descending
-      rows.sort((a, b) => {
-        const aScore = Number((a.querySelector('.mockup-score')?.textContent || '0').replace(/[$,]/g, '')) || 0;
-        const bScore = Number((b.querySelector('.mockup-score')?.textContent || '0').replace(/[$,]/g, '')) || 0;
-        return bScore - aScore;
-      });
-
-      // Re-append in sorted order
-      rows.forEach(row => track.appendChild(row));
-
-      updateRanks();
-    }
-
-    function rotateLeaderboardActivity() {
-      bumpRandomScore();
-      const nextDelay = 4000 + Math.random() * 3000;
-      setTimeout(rotateLeaderboardActivity, nextDelay);
-    }
-
-    updateRanks();
-    rotateLeaderboardActivity();
-  });
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const text = "Reminder for tomorrow at 9:00 AM.";
-  const el = document.getElementById('aiTyping');
-  if (!el) return;
-
-  function runTypingLoop() {
-    el.textContent = ""; // reset
-    let i = 0;
-
-    function type() {
-      if (i < text.length) {
-        el.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, 15 + Math.random() * 25);
-      } else {
-        // pause before restarting
-        setTimeout(runTypingLoop, 3000);
-      }
-    }
-
-    type();
-  }
-
-  runTypingLoop();
-});
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const el = document.getElementById('aiRotatingMessage');
-  if (!el) return;
-
-  const messages = [
-    "Updated CRM with latest customer activity.",
-    "Flagged 2 overdue tasks for follow-up.",
-    "Organized notes from today's meeting.",
-    "Created summary of project status."
-  ];
-
-  let index = 0;
-
-  function rotateMessage() {
-    index = (index + 1) % messages.length;
-
-    // fade out
-    el.style.opacity = 0;
-    el.style.transform = "translateY(-4px)";
-
-    setTimeout(() => {
-      el.textContent = messages[index];
-
-      // fade in
-      el.style.opacity = 1;
-      el.style.transform = "translateY(0)";
-    }, 250);
-
-    const nextDelay = 4000 + Math.random() * 3000;
-    setTimeout(rotateMessage, nextDelay);
-  }
-
-  rotateMessage();
-});
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector(".contact-form");
-  const successMsg = document.getElementById("form-success");
-  const formPanel = document.querySelector(".contact-form-panel");
-  const contactTriggers = document.querySelectorAll(".contact-form-trigger");
-
-  if (!form) return;
-
-  function guideContactForm(focusTarget) {
-    if (!formPanel) return;
-
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const formTop = formPanel.getBoundingClientRect().top + window.pageYOffset - 100;
-
-    window.scrollTo({
-      top: Math.max(formTop, 0),
-      behavior: reduceMotion ? "auto" : "smooth"
-    });
-
-    formPanel.classList.remove("is-guided-focus");
-    void formPanel.offsetWidth;
-    formPanel.classList.add("is-guided-focus");
-
-    window.setTimeout(() => {
-      const target = focusTarget || form.querySelector("input, textarea, select");
-      target?.focus({ preventScroll: true });
-
-      if (target && typeof target.selectionStart === "number") {
-        const end = target.value.length;
-        target.setSelectionRange(end, end);
-      }
-    }, reduceMotion ? 80 : 320);
-
-    window.setTimeout(() => {
-      formPanel.classList.remove("is-guided-focus");
-    }, 1850);
-  }
-
-  if (contactTriggers.length && formPanel) {
-    contactTriggers.forEach((trigger) => {
-      trigger.addEventListener("click", function (event) {
-        event.preventDefault();
-        guideContactForm();
-      });
-    });
-  }
-
-  const params = new URLSearchParams(window.location.search);
-
-  if (params.get("intent") === "careers") {
-    const categoryField = form.querySelector('[name="category"]');
-    const messageField = form.querySelector('[name="message"]');
-    const careerMessage = `Hi ARSO,
-
-I’m interested in future opportunities, contract work, or collaborating on operational systems/process improvement.
-
-A little about me:
-`;
-
-    if (categoryField) {
-      categoryField.value = "Job Openings / Contract Work";
-    }
-
-    if (messageField && !messageField.value.trim()) {
-      messageField.value = careerMessage;
-    }
-
-    window.setTimeout(() => {
-      guideContactForm(messageField);
-    }, 160);
-  }
-
-  form.addEventListener("submit", async function(e) {
-    e.preventDefault();
-
-    const button = form.querySelector("button");
-    button.textContent = "Sending...";
-    button.disabled = true;
-
-    const name = form.querySelector('[name="name"]')?.value.trim() || "";
-    const email = form.querySelector('[name="email"]')?.value.trim() || "";
-    const company = form.querySelector('[name="company"]')?.value.trim() || "Not provided";
-    const category = form.querySelector('[name="category"]')?.value || "Not provided";
-    const message = form.querySelector('[name="message"]')?.value.trim() || "";
-
-    const submittedAt = new Date().toLocaleString();
-    const submittedAtField = document.getElementById("submittedAt");
-    const summaryField = document.getElementById("leadSummary");
-    const replyToField = form.querySelector('[name="_replyto"]');
-
-if (replyToField) {
-  replyToField.value = email;
-}
-
-    if (submittedAtField) {
-      submittedAtField.value = submittedAt;
-    }
-
-    if (summaryField) {
-      summaryField.value =
-`NEW WEBSITE LEAD
--------------------------
-Name: ${name}
-Email: ${email}
-Company: ${company}
-Process Category: ${category}
-Submitted At: ${submittedAt}
-
-Process Details:
-${message}`;
-    }
-
-    const data = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        form.style.opacity = "0";
-        form.style.transition = "opacity 0.3s ease";
-
-        setTimeout(() => {
-          form.style.display = "none";
-          successMsg.style.display = "block";
-          successMsg.style.opacity = "0";
-          successMsg.style.transition = "opacity 0.3s ease";
-
-          setTimeout(() => {
-            successMsg.style.opacity = "1";
-          }, 50);
-        }, 300);
-      } else {
-        button.textContent = "Start the Conversation";
-        button.disabled = false;
-        alert("Something went wrong. Please try again.");
-      }
-    } catch (error) {
-      button.textContent = "Start the Conversation";
-      button.disabled = false;
-      alert("Something went wrong. Please try again.");
-    }
-  });
-});
-</script>
-<!-- Back to top button -->
-<button id="backToTop" type="button" aria-label="Back to top">
-  <i data-lucide="arrow-up"></i>
-</button>
-
-<!-- Lucide (make sure this is included ONCE) -->
-<script src="https://unpkg.com/lucide@latest"></script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  // Render icons AFTER button exists
-  lucide.createIcons();
-
-  const backToTop = document.getElementById("backToTop");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      backToTop.classList.add("show");
-    } else {
-      backToTop.classList.remove("show");
-    }
-  });
-
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-
-});
-</script>
-<script>
-const header = document.querySelector("header");
-let headerIsCompact = false;
-
-function updateHeaderLogo() {
-  const shouldCompact = !headerIsCompact && window.scrollY > 120;
-  const shouldExpand = headerIsCompact && window.scrollY < 40;
-
-  if (shouldCompact) {
-    header.classList.add("scrolled");
-    headerIsCompact = true;
-  } else if (shouldExpand) {
-    header.classList.remove("scrolled");
-    headerIsCompact = false;
-  }
-}
-
-window.addEventListener("scroll", updateHeaderLogo, { passive: true });
-updateHeaderLogo();
-</script>
-  
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const scores = document.querySelectorAll(".hero-performer-card b");
-  if (!scores.length) return;
-
-  setInterval(() => {
-    const score = scores[Math.floor(Math.random() * scores.length)];
-    const current = Number(score.textContent.replace(/[$,]/g, ""));
-    if (!Number.isFinite(current)) return;
-
-    const next = current + Math.floor(Math.random() * 1200 + 300);
-    score.textContent = "$" + next.toLocaleString();
-    score.classList.add("score-pop");
-
-    setTimeout(() => score.classList.remove("score-pop"), 500);
-  }, 3500);
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const aiRoot = document.querySelector(".ai-workflow-mockup");
-  if (!aiRoot) return;
-
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reducedMotion) return;
-
-  const randomDelay = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
-  function softSwap(el, nextText, highlightTarget) {
-    if (!el || el.textContent.trim() === nextText) return;
-
-    el.classList.add("is-changing");
-    if (highlightTarget) highlightTarget.classList.add("is-live-update", "is-live-highlight", "is-live-nudge");
-
-    setTimeout(() => {
-      el.textContent = nextText;
-      el.classList.remove("is-changing");
-    }, 320);
-
-    setTimeout(() => {
-      if (highlightTarget) highlightTarget.classList.remove("is-live-update", "is-live-highlight", "is-live-nudge");
-    }, 1700);
-  }
-
-  const kpis = [
-    { el: aiRoot.querySelector('[data-ai-kpi="emails"]'), max: 10 },
-    { el: aiRoot.querySelector('[data-ai-kpi="tasks"]'), max: 5 },
-    { el: aiRoot.querySelector('[data-ai-kpi="followups"]'), max: 4 }
-  ];
-
-  function updateKpi() {
-    const available = kpis.filter(({ el, max }) => el && Number(el.textContent) < max);
-    if (available.length) {
-      const item = available[Math.floor(Math.random() * available.length)];
-      const next = String(Number(item.el.textContent) + 1);
-      softSwap(item.el, next, item.el.closest(".ai-summary-card"));
-    }
-
-    setTimeout(updateKpi, randomDelay(5000, 10000));
-  }
-
-  const workflowChanges = [
-    () => {
-      const state = aiRoot.querySelector('[data-ai-state="followup"]');
-      const row = state && state.closest(".ai-activity-row");
-      if (!state || state.textContent.trim() === "Complete") return false;
-      state.className = "ai-state complete is-changing";
-      softSwap(state, "Complete", row);
-      return true;
-    },
-    () => {
-      const state = aiRoot.querySelector('[data-ai-state="reminder"]');
-      const row = state && state.closest(".ai-activity-row");
-      if (!state || state.textContent.trim() === "Active") return false;
-      state.className = "ai-state active is-changing";
-      softSwap(state, "Active", row);
-      return true;
-    },
-    () => {
-      const time = aiRoot.querySelector('[data-ai-time="vendor"]');
-      const row = time && time.closest(".ai-activity-row");
-      if (!time || time.textContent.includes("Just now")) return false;
-      softSwap(time, "Inventory inbox \u2022 Just now", row);
-      return true;
-    },
-    () => {
-      const row = aiRoot.querySelector(".ai-activity-row:nth-of-type(4)");
-      if (!row) return false;
-      row.classList.add("is-live-highlight");
-      setTimeout(() => row.classList.remove("is-live-highlight"), 1600);
-      return true;
-    }
-  ];
-
-  function updateWorkflow() {
-    const shuffled = [...workflowChanges].sort(() => Math.random() - 0.5);
-    shuffled.some((change) => change());
-    setTimeout(updateWorkflow, randomDelay(5000, 10000));
-  }
-
-  function updateAutomationStatus() {
-    const active = aiRoot.querySelector('[data-ai-status="active"]');
-    const waiting = aiRoot.querySelector('[data-ai-status="waiting"]');
-
-    if (active && active.textContent.trim() === "4 active") {
-      softSwap(active, "5 active", active.closest(".ai-automation-row"));
-    } else if (waiting && waiting.textContent.trim() === "2 waiting") {
-      softSwap(waiting, "1 waiting", waiting.closest(".ai-automation-row"));
-    }
-
-    setTimeout(updateAutomationStatus, randomDelay(5000, 10000));
-  }
-
-  function nudgeSuggestedActions() {
-    const panel = aiRoot.querySelector(".ai-actions-panel");
-    if (panel) {
-      panel.classList.add("is-live-nudge");
-      setTimeout(() => panel.classList.remove("is-live-nudge"), 1800);
-    }
-
-    setTimeout(nudgeSuggestedActions, randomDelay(5000, 10000));
-  }
-
-  setTimeout(updateKpi, randomDelay(3000, 6000));
-  setTimeout(updateWorkflow, randomDelay(4500, 7500));
-  setTimeout(updateAutomationStatus, randomDelay(6000, 9000));
-  setTimeout(nudgeSuggestedActions, randomDelay(7500, 10000));
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const board = document.querySelector(".leaderboard-system-mockup");
-  if (!board) return;
-
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reducedMotion) return;
-
-  const randomDelay = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
-  function pulse(el) {
-    if (!el) return;
-    el.classList.add("is-board-update");
-    setTimeout(() => el.classList.remove("is-board-update"), 1600);
-  }
-
-  function softText(el, nextText, glowTarget) {
-    if (!el || el.textContent.trim() === nextText) return;
-    el.classList.add("is-changing");
-    pulse(glowTarget || el.closest(".arso-app-card"));
-
-    setTimeout(() => {
-      el.textContent = nextText;
-      el.classList.remove("is-changing");
-    }, 320);
-  }
-
-  function parseScore(text) {
-    return Number(String(text).replace(/[$,%K,\s]/g, "")) || 0;
-  }
-
-  function formatScore(currentText, next) {
-    if (String(currentText).includes("$")) return "$" + next.toLocaleString();
-    return String(next);
-  }
-
-  function getPrimaryRows() {
-    return Array.from(board.querySelectorAll('.leaderboard-rank-row:not([data-board-clone="true"])'));
-  }
-
-  function syncBoardClones() {
-    const primaryRows = getPrimaryRows();
-    const clones = Array.from(board.querySelectorAll('.leaderboard-rank-row[data-board-clone="true"]'));
-
-    primaryRows.forEach((row, index) => {
-      if (!clones[index]) return;
-      clones[index].innerHTML = row.innerHTML;
-      clones[index].className = row.className;
-      clones[index].setAttribute("data-board-row", row.getAttribute("data-board-row") || "");
-      clones[index].setAttribute("data-board-clone", "true");
-      clones[index].setAttribute("aria-hidden", "true");
-    });
-  }
-
-  function createBoardClones() {
-    const rankingPanel = board.querySelector(".leaderboard-rank-list");
-    if (!rankingPanel || rankingPanel.querySelector('[data-board-clone="true"]')) return;
-
-    getPrimaryRows().forEach((row) => {
-      const clone = row.cloneNode(true);
-      clone.setAttribute("data-board-clone", "true");
-      clone.setAttribute("aria-hidden", "true");
-      rankingPanel.appendChild(clone);
-    });
-  }
-
-  function updateRanks() {
-    const rows = getPrimaryRows();
-    const rankingPanel = board.querySelector(".leaderboard-rank-list");
-    board.querySelectorAll('.leaderboard-rank-row[data-board-clone="true"]').forEach((clone) => clone.remove());
-
-    rows
-      .sort((a, b) => parseScore(b.querySelector("b")?.textContent) - parseScore(a.querySelector("b")?.textContent))
-      .forEach((row, index) => {
-        row.querySelector(".leaderboard-rank").textContent = index + 1;
-        row.classList.toggle("is-leading", index === 0);
-        rankingPanel.appendChild(row);
-      });
-
-    createBoardClones();
-  }
-
-  function updateScore() {
-    const rows = getPrimaryRows();
-    const row = rows[Math.floor(Math.random() * rows.length)];
-    const score = row && row.querySelector("b");
-    const progress = row && row.querySelector(".leaderboard-progress span");
-    if (!row || !score) return;
-
-    const current = parseScore(score.textContent);
-    const increase = score.textContent.includes("$") ? randomDelay(600, 1800) : randomDelay(1, 4);
-    const next = current + increase;
-
-    softText(score, formatScore(score.textContent, next), row);
-
-    if (progress) {
-      const currentWidth = parseScore(progress.style.width || "70");
-      progress.style.width = Math.min(100, currentWidth + randomDelay(1, 4)) + "%";
-    }
-
-    setTimeout(updateRanks, 500);
-    setTimeout(syncBoardClones, 520);
-    setTimeout(updateScore, randomDelay(5000, 10000));
-  }
-
-  function updateKpi() {
-    const choices = [
-      () => {
-        const el = board.querySelector('[data-board-kpi="sales"]');
-        if (!el) return;
-        const next = parseScore(el.textContent) + randomDelay(2, 5);
-        softText(el, "$" + next + "K", el.closest(".leaderboard-kpi"));
-      },
-      () => {
-        const el = board.querySelector('[data-board-kpi="deals"]');
-        if (!el) return;
-        softText(el, String(parseScore(el.textContent) + randomDelay(1, 3)), el.closest(".leaderboard-kpi"));
-      },
-      () => {
-        const el = board.querySelector('[data-board-kpi="pipeline"]');
-        if (!el) return;
-        const next = parseScore(el.textContent) + randomDelay(4, 9);
-        softText(el, "$" + next + "K", el.closest(".leaderboard-kpi"));
-      },
-      () => {
-        const el = board.querySelector('[data-board-kpi="goal"]');
-        if (!el) return;
-        softText(el, Math.min(99, parseScore(el.textContent) + 1) + "%", el.closest(".leaderboard-kpi"));
-      }
-    ];
-
-    choices[Math.floor(Math.random() * choices.length)]();
-    setTimeout(updateKpi, randomDelay(5000, 10000));
-  }
-
-  const feedMessages = [
-    ["Morgan closed 2 deals this week", "Sales Team \u2022 Just now"],
-    ["William S. hit 135% of monthly goal", "Enterprise \u2022 Just now"],
-    ["Taylor added 4 qualified opportunities", "Mid-Market \u2022 1 min ago"],
-    ["Casey moved into the top 3 for the week", "Inbound \u2022 Just now"],
-    ["Riley booked 3 demos this week", "SMB \u2022 2 min ago"],
-    ["Drew advanced a proposal to close", "Enterprise \u2022 3 min ago"]
-  ];
-  let feedIndex = 0;
-
-  function updateFeed() {
-    const feed = board.querySelector("[data-board-feed]");
-    if (!feed) return;
-
-    feedIndex = (feedIndex + 1) % feedMessages.length;
-    const [title, meta] = feedMessages[feedIndex];
-    feed.classList.add("is-changing", "is-board-update");
-
-    setTimeout(() => {
-      feed.querySelector("strong").textContent = title;
-      feed.querySelector("span").textContent = meta;
-      feed.classList.remove("is-changing");
-    }, 320);
-
-    setTimeout(() => feed.classList.remove("is-board-update"), 1700);
-    setTimeout(updateFeed, randomDelay(5000, 10000));
-  }
-
-  function updateTimestamp() {
-    const stamp = board.querySelector("[data-board-updated]");
-    if (stamp) {
-      const values = ["Updated just now", "Updated 15 sec ago", "Updated 30 sec ago"];
-      softText(stamp, values[Math.floor(Math.random() * values.length)], stamp.closest(".leaderboard-rankings"));
-    }
-
-    setTimeout(updateTimestamp, randomDelay(7000, 12000));
-  }
-
-  createBoardClones();
-  updateRanks();
-
-  setTimeout(updateScore, randomDelay(3000, 6000));
-  setTimeout(updateKpi, randomDelay(4500, 7500));
-  setTimeout(updateFeed, randomDelay(6000, 9000));
-  setTimeout(updateTimestamp, randomDelay(7500, 10000));
-});
-</script>
-
-<script src="arso-polish.js"></script>
+      <button class="modal-close" id="closeProjectModal">×</button>
+    </div>
+
+    <form id="projectForm" class="project-form">
+      <div class="form-section">
+  <h3>Project</h3>
+      <label>
+        Client Name
+        <input id="clientName" type="text" required list="projectClientOptions" placeholder="Search or type a new client..." />
+        <datalist id="projectClientOptions"></datalist>
+        <small class="client-create-hint" id="projectClientCreateHint" hidden></small>
+      </label>
+
+      <label>
+        Project Name
+        <input id="projectName" type="text" required placeholder="Example: CRM + workflow system" />
+      </label>
+
+
+      <label>Project Type
+  <input id="projectType" name="projectType" type="text" placeholder="CRM, dashboard, website, automation..." />
+</label>
+
+<label>Status / Workflow
+  <select id="projectStage" name="projectStage">
+    <option value="new">New</option>
+    <option value="discovery">Discovery</option>
+    <option value="proposal">Proposal</option>
+    <option value="build">Build</option>
+    <option value="launch">Test / Launch</option>
+  </select>
+</label>
+      <label>
+        Source
+        <input id="projectSource" type="text" placeholder="Referral, Website, LinkedIn..." />
+      </label>
+<label>Priority
+  <select id="priority" name="priority">
+    <option value="normal">Normal</option>
+    <option value="high">High</option>
+    <option value="urgent">Urgent</option>
+    <option value="low">Low</option>
+  </select>
+</label>
+
+<label>Est. Completion Date
+  <input id="estimatedCompletionDate" name="estimatedCompletionDate" type="date" />
+</label>
+
+<label>Quote Value
+  <input id="quoteValue" name="quoteValue" type="number" min="0" step="100" />
+</label>
+
+<label>Final Value
+  <input id="finalValue" name="finalValue" type="number" min="0" step="100" />
+</label>
+</div>
+<div class="form-section">
+   <h3>Contact</h3>
+<label>Contact Name
+  <input id="contactName" name="contactName" type="text" />
+</label>
+
+<label>Company
+  <input id="contactCompany" name="contactCompany" type="text" />
+</label>
+
+<label>Website
+  <input id="contactWebsite" name="contactWebsite" type="text" />
+</label>
+
+<label>Phone
+  <input id="contactPhone" name="contactPhone" type="tel" />
+</label>
+
+<label>Email
+  <input id="contactEmail" name="contactEmail" type="email" />
+</label>
+
+<label>Contact Notes
+  <textarea id="contactNotes" name="contactNotes"></textarea>
+</label>
+</div>
+<div class="form-section">
+   <h3>Build</h3>
+<label>Project Notes
+  <textarea id="projectNotes" name="projectNotes"></textarea>
+</label>
+
+<label>Stack / Tools
+  <textarea id="stack" name="stack" placeholder="Supabase, Vercel, Cloudflare, Formspree..."></textarea>
+</label>
+</div>
+      <button type="submit" class="primary-btn">Create Project</button>
+    </form>
+  </div>
+</div>
+<!--Edit Project Card -->
+<div class="detail-backdrop" id="projectDetailBackdrop"></div>
+
+<aside class="project-detail-panel" id="projectDetailPanel" aria-hidden="true">
+  <div class="detail-header">
+    <div>
+      <span class="panel-kicker">Project Details</span>
+      <h2 id="detailTitle">Project</h2>
+    </div>
+    <button class="modal-close" id="closeProjectDetail">×</button>
+  </div>
+
+  <form id="projectDetailForm" class="project-form">
+    <input type="hidden" id="detailProjectId" />
+          <div class="project-detail-header">
+  <h3 id="detailTitle"><i data-lucide="pencil"></i> Update Project</h3>
+
+  <div class="detail-actions">
+    <!--button class="primary-btn" type="submit" form="projectDetailForm">
+      Save Changes
+    </button-->
+    <button type="submit" class="primary-btn">Save Changes</button>
+  </div>
+</div>
+    <div class="form-section">
+
+
+      <label>Client Name
+        <input id="detailClientName" name="detailClientName" type="text" />
+      </label>
+
+      <label>Project Name
+        <input id="detailProjectName" name="detailProjectName" type="text" />
+      </label>
+
+      <label>Project Type
+        <input id="detailProjectType" name="detailProjectType" type="text" />
+      </label>
+
+      <label>Status / Workflow
+        <select id="detailStage" name="detailStage">
+          <option value="new">New</option>
+          <option value="discovery">Discovery</option>
+          <option value="proposal">Proposal</option>
+          <option value="build">Build</option>
+          <option value="launch">Test / Launch</option>
+        </select>
+      </label>
+
+      <label>Priority
+        <select id="detailPriority" name="detailPriority">
+          <option value="normal">Normal</option>
+          <option value="high">High</option>
+          <option value="urgent">Urgent</option>
+          <option value="low">Low</option>
+        </select>
+      </label>
+
+      <label>Est. Completion Date
+        <input id="detailEstimatedCompletionDate" name="detailEstimatedCompletionDate" type="date" />
+      </label>
+
+      <label>Quote Value
+        <input id="detailQuoteValue" name="detailQuoteValue" type="number" />
+      </label>
+
+      <label>Final Value
+        <input id="detailFinalValue" name="detailFinalValue" type="number" />
+      </label>
+    </div>
+
+    <div class="form-section">
+      <h3>Contact</h3>
+
+      <label>Contact Name
+        <input id="detailContactName" name="detailContactName" type="text" />
+      </label>
+
+      <label>Company
+        <input id="detailContactCompany" name="detailContactCompany" type="text" />
+      </label>
+
+      <label>Website
+        <input id="detailContactWebsite" name="detailContactWebsite" type="text" />
+      </label>
+
+      <label>Phone
+        <input id="detailContactPhone" name="detailContactPhone" type="tel" />
+      </label>
+
+      <label>Email
+        <input id="detailContactEmail" name="detailContactEmail" type="email" />
+      </label>
+
+      <label>Contact Notes
+        <textarea id="detailContactNotes" name="detailContactNotes"></textarea>
+      </label>
+    </div>
+
+    <div class="form-section">
+      <h3>Build Notes</h3>
+
+      <label>Project Notes
+        <textarea id="detailProjectNotes" name="detailProjectNotes"></textarea>
+      </label>
+
+      <label>Stack / Tools
+        <textarea id="detailStack" name="detailStack"></textarea>
+      </label>
+    </div>
+<div class="form-section">
+  <h3>Tasks</h3>
+
+  <div class="task-create-row">
+    <input id="newTaskTitle" type="text" placeholder="Add a task..." />
+<select id="newTaskStatus">
+  <option value="todo">Todo</option>
+  <option value="doing">Doing</option>
+  <option value="done">Done</option>
+</select>
+    <input id="newTaskDueDate" type="date" />
+    <button type="button" class="light-btn" id="addTaskBtn">Add</button>
+  </div>
+
+  <div class="task-lanes" id="projectTaskList">
+  <div class="task-lane" data-status="todo">
+    <h4>Todo</h4>
+  </div>
+
+  <div class="task-lane" data-status="doing">
+    <h4>Doing</h4>
+  </div>
+
+  <div class="task-lane" data-status="done">
+    <h4>Done</h4>
+  </div>
+</div>
+</div>
+
+  </form>
+</aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="crm-demo.js"></script>
+
+
 </body>
 </html>
-
