@@ -1293,7 +1293,7 @@ p {
   position: relative;
 }
 
-@media (min-width: 981px) {
+@media (min-width: 1121px) {
   .process-grid::before {
     content: "";
     position: absolute;
@@ -18557,5 +18557,92 @@ li,
 @media (max-width: 420px) {
   .home-page .hero-service-strip {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Homepage polish: shared system hierarchy and laptop-first balance */
+.home-page .system-title,
+.home-page #featured-systems-early .project-card > .system-title,
+.home-page #projects .project-card > .system-title {
+  width: 100%;
+  max-width: 17ch;
+  margin: 0;
+  font-size: clamp(1.7rem, 2.35vw, 2.35rem);
+  font-weight: 850;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.home-page .hero-left h1 {
+  font-size: clamp(3rem, 6.35vw, 5.55rem);
+  line-height: 0.94;
+}
+
+@media (min-width: 900px) {
+  .home-page .logo-full {
+    height: 98px;
+  }
+
+  .home-page .nav {
+    min-height: 94px;
+  }
+}
+
+@media (min-width: 981px) {
+  .home-page #featured-systems-early #crm-project-operations,
+  .home-page #projects #inventory-management-system {
+    grid-template-columns: minmax(280px, 0.62fr) minmax(0, 1fr);
+  }
+
+  .home-page #featured-systems-early #ai-workflow-assistant,
+  .home-page #projects #sales-performance-board,
+  .home-page #projects #new-hire-readiness {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.62fr);
+  }
+
+  .home-page #featured-systems-early #crm-project-operations > .project-mockup,
+  .home-page #projects #inventory-management-system > .project-mockup {
+    grid-column: 2;
+  }
+
+  .home-page #featured-systems-early #crm-project-operations > :not(.project-mockup),
+  .home-page #projects #inventory-management-system > :not(.project-mockup) {
+    grid-column: 1;
+  }
+
+  .home-page #featured-systems-early #ai-workflow-assistant > .project-mockup,
+  .home-page #projects #sales-performance-board > .project-mockup,
+  .home-page #projects #new-hire-readiness > .project-mockup {
+    grid-column: 1;
+  }
+
+  .home-page #featured-systems-early #ai-workflow-assistant > :not(.project-mockup),
+  .home-page #projects #sales-performance-board > :not(.project-mockup),
+  .home-page #projects #new-hire-readiness > :not(.project-mockup) {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 1120px) {
+  .home-page .system-title,
+  .home-page #featured-systems-early .project-card > .system-title,
+  .home-page #projects .project-card > .system-title {
+    max-width: 20ch;
+    font-size: clamp(1.65rem, 3.25vw, 2.2rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page .hero-left h1 {
+    font-size: clamp(2.4rem, 12.5vw, 3.55rem);
+  }
+
+  .home-page .system-title,
+  .home-page #featured-systems-early .project-card > .system-title,
+  .home-page #projects .project-card > .system-title {
+    max-width: 18ch;
+    font-size: clamp(1.55rem, 7.5vw, 2rem);
+    line-height: 1.05;
   }
 }
