@@ -1,6 +1,15 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
   <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0H1S4Z1W0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-Y0H1S4Z1W0", {
+        debug_mode: new URLSearchParams(window.location.search).has("ga_debug")
+      });
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&display=swap" rel="stylesheet">
@@ -104,19 +113,19 @@
         </div>
 
         <div class="hero-service-strip" aria-label="Core services">
-          <div>
+          <div data-ga-event="crm_systems_clicked">
             <i data-lucide="users-round"></i>
             <span>CRM<br>Systems</span>
           </div>
-          <div>
+          <div data-ga-event="dashboards_reporting_clicked">
             <i data-lucide="bar-chart-3"></i>
             <span>Dashboards<br>&amp; Reporting</span>
           </div>
-          <div>
+          <div data-ga-event="automation_workflows_clicked">
             <i data-lucide="settings-2"></i>
             <span>Automation<br>Workflows</span>
           </div>
-          <div>
+          <div data-ga-event="internal_tools_clicked">
             <i data-lucide="code-2"></i>
             <span>Internal<br>Tools</span>
           </div>
@@ -366,7 +375,7 @@
 </p>
       </article>
 
-<article id="ai-workflow-assistant" class="project-card">
+<article id="ai-workflow-assistant" class="project-card" data-ga-event="ai_workflow_clicked">
 <span class="project-tag">AI &amp; Automation</span>
   <div class="project-mockup arso-app-shell ai-workflow-mockup">
     <div class="crm-module-header ai-module-header">
@@ -594,7 +603,7 @@
 
     <div class="projects-showcase">
       <div class="projects-featured">
-<article id="sales-performance-board" class="project-card featured">
+<article id="sales-performance-board" class="project-card featured" data-ga-event="sales_performance_clicked">
 	  <span class="project-tag">Leaderboard System</span>
         <div class="project-mockup project-mockup-lg arso-app-shell leaderboard-system-mockup">
           <div class="crm-module-header leaderboard-module-header">
@@ -841,7 +850,7 @@
       <div class="projects-grid">
 
 
-            <article id="inventory-management-system" class="project-card">
+            <article id="inventory-management-system" class="project-card" data-ga-event="inventory_system_clicked">
 	  <span class="project-tag">Inventory Operations</span>
 <div class="project-mockup arso-app-shell inventory-control-mockup">
   <div class="crm-module-header inventory-module-header">
@@ -1022,7 +1031,7 @@
       <a href="inventory-visibility.html" class="project-example-link project-detail-link">View Inventory System</a>
       </article>
 
-      <article id="new-hire-readiness" class="project-card">
+      <article id="new-hire-readiness" class="project-card" data-ga-event="team_readiness_clicked">
         <span class="project-tag">Training System</span>
         <div class="project-mockup arso-app-shell training-enable-mockup">
           <div class="crm-module-header training-module-header">
@@ -1916,6 +1925,10 @@ ${message}`;
       });
 
       if (response.ok) {
+        window.dispatchEvent(new CustomEvent("arso:contact_form_submitted", {
+          detail: { category }
+        }));
+
         form.style.opacity = "0";
         form.style.transition = "opacity 0.3s ease";
 
@@ -2311,6 +2324,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script src="arso-polish.js"></script>
+<script src="ga4-events.js"></script>
 </body>
 </html>
 
